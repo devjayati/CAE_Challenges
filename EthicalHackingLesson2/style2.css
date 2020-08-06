@@ -72,7 +72,7 @@ h1, h2, h3, h4 {
  
 /* Individual cards and slots */
  
-#cardSlots div, #cardPile div {
+#cardSlots div, #cardPile div, #matchedpairs div {
   float: left;
   width: 43%;
   height: 18%;

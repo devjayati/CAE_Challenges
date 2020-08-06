@@ -1,0 +1,173 @@
+/* Add some margin to the page and set a default font and colour */
+ 
+body {
+  margin: 30px;
+  font-family: Alegreya Sans, Verdana;
+}
+ 
+/* Give headings their own font */
+ 
+h1, h2, h3, h4 {
+  font-family: Alegreya Sans, Verdana;
+
+}
+h2, h3, h4 {
+	font-weight: normal;
+}
+/* Main content area */
+ 
+#content {
+  /*margin: 80px 70px;*/
+  text-align: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+ 
+/* Header/footer boxes */
+ 
+.wideBox {
+  clear: both;
+  text-align: center;
+  margin: 70px;
+  padding: 10px;
+  /*background: #ebedf2;
+  border: 1px solid #333;*/
+}
+ 
+/* Slots for final card positions */
+#cardSlots {
+  margin: 0 auto 3em auto;
+  background: #e8f9fd;
+  float: right;
+}
+ 
+/* The initial pile of unsorted cards */
+ 
+#cardSlots {
+  /*margin: 0 auto;*/
+  background: yellow;
+  float: left;
+}
+#cardPile {
+  /*margin: 0 auto;*/
+  background: orange;
+  float: left;
+}
+#cardThreats {
+  /*margin: 0 auto;*/
+  background: red;
+  float: left;
+}
+.scenario {
+  /*margin: 0 auto;*/
+  /*background: red;*/
+  float: left;
+    width: 40%;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 10px
+}
+#cardSlots, #cardPile, #cardThreats {
+  width: 25%;
+  height: 80%;
+  /*padding: .85em;*/
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    padding: 20px;
+    margin: 10px
+}
+ 
+/* Individual cards and slots */
+ 
+#cardSlots div, #cardPile div, #cardThreats div, #matchedpairs div {
+  float: left;
+  width: 30%;
+  height: 18%;
+  padding: 30px;
+  padding: 30px;
+  /*padding: .85em;
+  padding-top: 40px;
+  padding-bottom: 0;*/
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  margin: 10px 0 0 10px;
+  background: #fff;
+}
+ 
+/*#cardSlots div:first-child, #cardPile div:first-child {
+  margin-left: 0;
+}*/
+ 
+.scenario div.hovered {
+  background: #aaa;
+}
+
+ 
+.scenario div {
+  border-style: dashed;
+    padding: 30px;
+    width: 55%;
+    border-radius: 10px;
+    /* height: 18%;*/
+}
+#scenevuln1, #sceneharm1, #scenevuln2, #sceneharm2, #scenevuln3, #sceneharm3, #scenevuln4, #sceneharm4, #scenevuln5, #sceneharm5, #scenevuln6, #sceneharm6{ 
+	border-style: none;
+}
+#scenethre1, #scenethre2, #scenethre3, #scenethre4, #scenethre5, #scenethre6 {
+	border-style: none;
+}	
+#cardPile div, #cardSlots div, #cardThreats div  {
+  background: #666;
+  color: #fff;
+  font-size: 1em;
+  text-shadow: 0 0 3px #000;
+  text-align: center;
+}
+ 
+#cardPile div.ui-draggable-dragging, #cardSlots div.ui-draggable-dragging, #cardThreats div.ui-draggable-dragging {
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+ 
+/* Individually coloured cards */
+ 
+#card1.correct { background: purple; }
+#card2.correct { background: blue; }
+#card3.correct { background: green; }
+#card4.correct { background: yellow; }
+#card5.correct { background: orange; }
+#card6.correct { background: red; }
+ 
+ 
+/* "You did it!" message */
+#successMessage {
+	height: 100px;
+	color: green;
+	text-align:center;
+	width:100%;
+  /*position: absolute;
+  left: 580px;
+  top: 250px;
+  width: 0;
+  height: 0;
+  z-index: 100;
+  background: #dfd;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  padding: 20px;*/
+}

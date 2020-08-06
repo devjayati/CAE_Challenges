@@ -1,0 +1,55 @@
+Complete?: 
+http://cgi.soic.indiana.edu/~jdev/CryptoLesson3/ 
+http://cgi.soic.indiana.edu/~jdev/PasswordLesson1/
+http://cgi.soic.indiana.edu/~jdev/EthicalHackingLesson1/ 
+http://cgi.soic.indiana.edu/~jdev/SocialLesson1/ 
+
+Minor tasks left : 
+http://cgi.soic.indiana.edu/~jdev/SocialLesson3/ (bitmapping)
+http://cgi.soic.indiana.edu/~jdev/EthicalHackingLesson2/ (add text to cards and CSS accordingly)
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+<img src="airbnb.PNG" usemap="scaleMap0">
+
+<map id="scaleMap0" name="airbnb12_map"><area target="" alt="airbnb_control_login" title="airbnb_control_login" href="javascript:advanceExperiment(\'login\')" coords="775,1897,970,2071" shape="rect"><area target="" alt="airbnb_control_back" title="airbnb_control_back" href="javascript:advanceExperiment(\'back\')" coords="105,2105,104" shape="circle"></map>
+
+
+<img src="amazon.PNG" usemap="scaleMap0">
+
+<map id="scaleMap0" name="amazon12_map"><area target="" alt="amazon_control_login" title="amazon_control_login" href="javascript:advanceExperiment(\'login\')" coords="48,1645,1191,1783" shape="rect"><area target="" alt="amazon_control_login" title="amazon_control_login" href="javascript:advanceExperiment(\'login\')" coords="890,257,1079,371" shape="rect"><area target="" alt="amazon_control_back" title="amazon_control_back" href="javascript:advanceExperiment(\'back\')" coords="92,2119,89" shape="circle"></map>
+
+<map id="scaleMap0" name="amazon_map"><area target="" alt="amazon_tool_login" title="amazon_tool_login" href="javascript:advanceExperiment(\'login\')" coords="48,1645,1191,1783" shape="rect"><area target="" alt="amazon_tool_login" title="amazon_tool_login" href="javascript:advanceExperiment(\'login\')" coords="890,257,1079,371" shape="rect"><area target="" alt="amazon_tool_back" title="amazon_tool_back" href="javascript:advanceExperiment(\'back\')" coords="92,2119,89" shape="circle"></map>
+
+<img src="netflix.PNG" usemap="#image-map">
+
+<map id="scaleMap0" name="netflix12_map"><area target="" alt="netflix_control_login" title="netflix_control_login" href="javascript:advanceExperiment(\'login\')" coords="990,301,1194,407" shape="rect"><area target="" alt="netflix_control_back" title="netflix_control_back" href="javascript:advanceExperiment(\'back\')" coords="104,2105,100" shape="circle"></map>
+
+<map id="scaleMap0" name="netflix_map"><area target="" alt="netflix_tool_login" title="netflix_tool_login" href="javascript:advanceExperiment(\'login\')" coords="990,301,1194,407" shape="rect"><area target="" alt="netflix_tool_back" title="netflix_tool_back" href="javascript:advanceExperiment(\'back\')" coords="104,2105,100" shape="circle"></map>
+
+
+<img src="steam.PNG" usemap="#image-map">
+
+<map id="scaleMap0" name="steam12_map"><area target="" alt="steam_control_login" title="steam_control_login" href="javascript:advanceExperiment(\'login\')" coords="866,249,1216,410" shape="rect"><area target="" alt="steam_control_back" title="steam_control_back" href="javascript:advanceExperiment(\'back\')" coords="98,2131,82" shape="circle"></map>
+
+<map id="scaleMap0" name="steam_map"><area target="" alt="steam_tool_login" title="steam_tool_login" href="javascript:advanceExperiment(\'login\')" coords="866,249,1216,410" shape="rect"><area target="" alt="steam_tool_back" title="steam_tool_back" href="javascript:advanceExperiment(\'back\')" coords="98,2131,82" shape="circle"></map>
+
+<img src="twitch.PNG" usemap="#image-map">
+
+<map id="scaleMap0" name="twitch12_map"><area target="" alt="twitch_control_login" title="twitch_control_login" href="javascript:advanceExperiment(\'login\')" coords="648,255,978,360" shape="rect"><area target="" alt="twitch_control_back" title="twitch_control_back" href="javascript:advanceExperiment(\'back\')" coords="89,2122,84" shape="circle"></map>
+
+<map id="scaleMap0" name="twitch_map"><area target="" alt="twitch_tool_login" title="twitch_tool_login" href="javascript:advanceExperiment(\'login\')" coords="648,255,978,360" shape="rect"><area target="" alt="twitch_tool_back" title="twitch_tool_back" href="javascript:advanceExperiment(\'back\')" coords="89,2122,84" shape="circle"></map>
+
+
+<img src="twitter.PNG" usemap="#image-map">
+
+<map id="scaleMap0" name="twitter12_map"><area target="" alt="twitter_control_login" title="twitter_control_login" href="javascript:advanceExperiment(\'login\')" coords="53,917,1190,1186" shape="rect"><area target="" alt="twitter_control_back" title="twitter_control_back" href="javascript:advanceExperiment(\'back\')" coords="95,2134,73" shape="circle"></map>
+
+
+<map id="scaleMap0" name="twitter_map"><area target="" alt="twitter_tool_login" title="twitter_tool_login" href="javascript:advanceExperiment(\'login\')" coords="53,917,1190,1186" shape="rect"><area target="" alt="twitter_tool_back" title="twitter_tool_back" href="javascript:advanceExperiment(\'back\')" coords="95,2134,73" shape="circle"></map>
+
+
+
+
+

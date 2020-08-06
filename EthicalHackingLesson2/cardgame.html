@@ -1,0 +1,245 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+
+<title>Ethical Hacking Lesson 2</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+<script type="text/javascript">
+
+var correctCards = 0;
+$( init );
+
+function init() {
+
+  // Hide the success message
+  $('#successMessage').hide();
+  $('#successMessage').css( {
+    left: '580px',
+    top: '250px',
+    width: 0,
+    height: 0
+  } );
+
+  // Reset the game
+  correctCards = 0;
+  $('#cardPile').html( '' );
+  $('#cardSlots').html( '' );
+  $('#sceneharm').html( '' );
+  $('#scenevuln').html( '' );
+
+  // Create the pile of vulnerabilities
+  var numbers = [ 1, 2, 3, 4, 5, 6 ];
+  var terms = ['V1', 'V2', 'V3', 'V4', 'V5', 'V6' ];
+
+  for ( var i=0; i<6; i++ ) {
+    $('<div>' + terms[i] + '</div>').data( 'number', numbers[i] ).attr( 'id', 'card'+numbers[i] ).appendTo( '#cardPile' ).draggable( {
+      
+      stack: '#cardPile div',
+      cursor: 'move',
+      revert: true
+    } );
+  }
+   // Create the harm cards
+	var numbers2 = [ 1, 2, 3, 4, 5, 6 ];
+	var terms2 = [ 'harm1', 'harm2', 'harm3', 'harm4', 'harm5', 'harm6' ];
+
+  for ( var i=0; i<6; i++ ) {
+    $('<div>' + terms2[i] + '</div>').data( 'number', numbers2[i] ).attr( 'id', 'card'+numbers2[i] ).appendTo( '#cardSlots' ).draggable( {
+      
+      stack: '#cardSlots div',
+      cursor: 'move',
+      revert: true
+    } );
+  }
+  // Create the harm cards
+  //var words = [ 'harm1', 'harm2', 'harm3', 'harm4', 'harm5', 'harm6' ];
+  //for ( var i=0; i<6; i++ ) {
+   // $('<div>' + words[i] + '</div>').data( 'number', i ).appendTo( '#cardSlots' ).draggable( {
+    //  stack: '#cardSlots div',
+     // cursor: 'move',
+     // revert: true
+    //} );
+  //}
+
+//scenario1
+	var scene1 = [ 'vulnerabilities', 'harms'];
+    $('<div>' + scene1[0] + '</div>').data( 'number', 1 ).appendTo( '#scenevuln1' ).droppable( {
+      accept: '#cardPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+  
+    $('<div>' + scene1[1] + '</div>').data( 'number', 1 ).appendTo( '#sceneharm1' ).droppable( {
+      accept: '#cardSlots div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+	
+	//scenario2
+	var scene2 = [ 'vulnerabilities', 'harms'];
+    $('<div>' + scene2[0] + '</div>').data( 'number', 2 ).appendTo( '#scenevuln2' ).droppable( {
+      accept: '#cardPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+  
+    $('<div>' + scene2[1] + '</div>').data( 'number', 2 ).appendTo( '#sceneharm2' ).droppable( {
+      accept: '#cardSlots div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+	
+	//scenario3
+	var scene3 = [ 'vulnerabilities', 'harms'];
+    $('<div>' + scene3[0] + '</div>').data( 'number', 3 ).appendTo( '#scenevuln3' ).droppable( {
+      accept: '#cardPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+  
+    $('<div>' + scene3[1] + '</div>').data( 'number', 3 ).appendTo( '#sceneharm3' ).droppable( {
+      accept: '#cardSlots div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+	
+	//scenario4
+	var scene4 = [ 'vulnerabilities', 'harms'];
+    $('<div>' + scene4[0] + '</div>').data( 'number', 4 ).appendTo( '#scenevuln4' ).droppable( {
+      accept: '#cardPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+  
+    $('<div>' + scene4[1] + '</div>').data( 'number', 4 ).appendTo( '#sceneharm4' ).droppable( {
+      accept: '#cardSlots div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+	
+	//scenario5
+	var scene5 = [ 'vulnerabilities', 'harms'];
+    $('<div>' + scene5[0] + '</div>').data( 'number', 5 ).appendTo( '#scenevuln5' ).droppable( {
+      accept: '#cardPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+  
+    $('<div>' + scene5[1] + '</div>').data( 'number', 5 ).appendTo( '#sceneharm5' ).droppable( {
+      accept: '#cardSlots div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+	
+	//scenario6
+	var scene6 = [ 'vulnerabilities', 'harms'];
+    $('<div>' + scene6[0] + '</div>').data( 'number', 6 ).appendTo( '#scenevuln6' ).droppable( {
+      accept: '#cardPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+  
+    $('<div>' + scene6[1] + '</div>').data( 'number', 6 ).appendTo( '#sceneharm6' ).droppable( {
+      accept: '#cardSlots div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+
+  
+}
+
+function handleCardDrop( event, ui ) {
+  var slotNumber = $(this).data( 'number' ); // harm
+  //console.log(slotNumber);
+  var cardNumber1 = ui.draggable.data( 'number' ); //vulnerability
+	//console.log(cardNumber1);
+  var cardNumber2 = ui.draggable.data( 'number' ); //harm
+    //console.log(cardNumber2);
+  // If the card was dropped to the correct slot,
+  // change the card colour, position it directly
+  // on top of the slot, and prevent it being dragged
+  // again
+
+  if ( (cardNumber1 == cardNumber2) && (cardNumber1== slotNumber)) {
+    ui.draggable.addClass( 'correct' );
+    ui.draggable.draggable( 'disable' );
+    $(this).droppable( 'disable' );
+    ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
+    ui.draggable.draggable( 'option', 'revert', false );
+    correctCards++;
+  } 
+  
+  // If all the cards have been placed correctly then display a message
+  // and reset the cards for another go
+
+  if ( correctCards == 12 ) {
+    $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '380px',
+      top: '200px',
+      width: '100%',
+      height: '100px',
+      opacity: 1
+    } );
+  }
+
+}
+
+</script>
+
+</head>
+<body>
+
+<div style="text-align:center">
+  <h1>Ethical Hacking Lesson 2: Card Game</h1>
+  <h2>In this game you are given two sets of cards: <strong>Vulnerabilities</strong> and <strong>Harms</strong>. There are <strong>six scenarios</strong> which each have a vulnerability and can cause a specific harm. Your goal is to match vulnerabilities with the harms for each of the scenarios. If you match all the cards correctly, you will be able to view the challenge flag.</h2>
+</div>
+
+<div id="successMessage">
+    <h2>You got them all correct! The challenge flag is 90485795908.</h2>
+    <button onclick="init()" style="background: chocolate;padding: 10px;color: white;border: 1px solid;border-radius: 10px;">Reset</button>
+  </div>
+  
+<div id="content">
+
+  <div id="cardPile"> </div>
+  <div id="cardSlots"> </div>
+  <div id="scenario1" class="scenario"> <p> Scenario 1: Blah. </p>
+	<div id="scenevuln1"></div>
+	<div id="sceneharm1"></div>
+  </div>
+  <div id="scenario2" class="scenario"> <p> Scenario 2: Blah. </p> <!--p> adding the matched pairs here </p-->
+	<div id="scenevuln2"></div>
+	<div id="sceneharm2"></div>
+  </div>
+  <div id="scenario3" class="scenario"> <p> Scenario 3: Blah. </p><!--p> adding the matched pairs here </p-->
+	<div id="scenevuln3"></div>
+	<div id="sceneharm3"></div>
+  </div>
+  <div id="scenario4" class="scenario"> <p> Scenario 4: Blah. </p><!--p> adding the matched pairs here </p-->
+	<div id="scenevuln4"></div>
+	<div id="sceneharm4"></div>
+  </div>
+  <div id="scenario5" class="scenario"> <p> Scenario 5: Blah. </p><!--p> adding the matched pairs here </p-->
+	<div id="scenevuln5"></div>
+	<div id="sceneharm5"></div>
+  </div>
+  <div id="scenario6" class="scenario"> <p> Scenario 6: Blah. </p><!--p> adding the matched pairs here </p-->
+	<div id="scenevuln6"></div>
+	<div id="sceneharm6"></div>
+  </div>
+
+</div>
+
+<div class="wideBox">
+  <p style="font-size: .8em; line-height: 1.5em;">Drag-drop functionality sourced from Mike Wood licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>. Created by <a href="http://usablesecurity.net/">HATS Indiana University</a> under the MIT license.</p>
+</div>
+
+</body>
+</html>
+

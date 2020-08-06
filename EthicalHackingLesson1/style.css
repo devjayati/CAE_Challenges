@@ -1,39 +1,65 @@
 #main {
         width:100%;
-		margin : 0;
-        font-family: arial;
+		min-height: 500px;
+		height: fit-content;
+		/*margin : 0;
+        font-family: arial;*/
 		display:flex;
 		padding:10px;
+		margin: 0px;
+		font-family: Alegreya Sans, Verdana;
     }
-#content {
+#content{
 border:1px solid black;
-width:50%;
+width:30%;
 margin : 0;
 float : left ;
-padding:10px;
+padding:20px;
+background-color: #e8f9fd;
+text-align:center;
+}
+#dropDown {
+	
+    padding: 20px;
+    /*font-size: 25px;*/
+    margin-bottom: 20px;
+    border-color: #900314;
+
+}
+#thirddiv {
+border:1px solid black;
+width:30%;
+margin : 0;
+float : left ;
+padding:20px;
 background-color: #e8f9fd;
 }
 
 #panel {
 border:1px solid black;
-width:50%;
+width:40%;
 margin : 0;
 float : left ;
-padding:10px;
+padding:20px;
 
 }
+#footer {
+text-align: center;
+}
+
 #lightpanel {
- width: 50%;
+ width: 30%;
  height: 100%;
 }
 img {
-  width: 50%;
+  width: 300px;
   height: auto;
 -webkit-transform:rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
+  margin-top: 150px;
 }
 .button {
   /*background-color: #4CAF50;*/
@@ -53,6 +79,6 @@ img {
 	background-color: #ff1e00;
 }
 #next {
-	float: right;
+	/*float: right;*/
 	background-color: #657a00;
 }

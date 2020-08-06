@@ -6,40 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
-    <title>Whack a Mole!</title>
+    <title>Password Lesson 1</title>
 </head>
 
 <body>
-    <h1>Whack-a-mole!</h1><span class="score">0</span>
-    <button onClick="startGame()">Start!</button>
-
-    <div class="game">
+    <h2>Password Lesson 1: Whack-a-Number!</h2>
+	<p style="width: 60%;margin: auto;padding: 20px;"> In the following challenge, you will be playing the Whack-a-Mole game, but with a twist! You will have to decide what the 6-digit pattern is for the mole that peeps from the hole. If you think that there is no pattern to it, just type in "RANDOM". If you are correct, a 4-digit numeric flag will be displayed. </p> 
+    <!-- drop down list of sequences  -->
+	<hr>
+	<p style="font-size:30px"> Please select your game level: </p>
+	<select id="dropDown" onchange="test()">
+	<option value="default" selected="selected" id="selected"> Levels </option>
+	<option value="one" id="level1">Level 1</option>
+	<option value="two" id="level2">Level 2</option>
+	<option value="three" id="level3">Level 3</option>
+	</select>
+	<div class="wrap">
+	<div>
+    <p id="hidelabel" style="display:none;">Score:</p><p id="score" class="score" style="display:none;">0</p>
+	<div style="margin:40px auto; height: 50px;">
+	<button id="button" style="display:none;" onClick="startGame()">Start!</button>
+	</div>
+	</div>
+    <div class="game" id="game1" style="display:none;">
         <div class="hole hole1">
             <div class="mole"></div>
-        </div>
+        <p>1</p>
+		</div>
 
         <div class="hole hole2">
             <div class="mole"></div>
-        </div>
+        <p>2</p>
+		</div>
 
         <div class="hole hole3">
             <div class="mole"></div>
-        </div>
+        <p>3</p>
+		</div>
 
         <div class="hole hole4">
             <div class="mole"></div>
-        </div>
+        <p>4</p>
+		</div>
 
         <div class="hole hole5">
             <div class="mole"></div>
-        </div>
+        <p>5</p>
+		</div>
 
         <div class="hole hole6">
             <div class="mole"></div>
-        </div>
+        <p>6</p>
+		</div>
 
     </div>
-    <script src="script.js"></script>
+	</div>
+	<div id="question" class="container" style="display:none;">
+			<div class="col-75">
+				<label for="answer">Please enter the 6-digit pattern. Type in RANDOM if you think there is no pattern.</label>
+			</div>
+		<div class="col-25">
+			<input type="text" id="answer" name="firstname" placeholder="Your answer..">
+		</div>
+		<div style="height:100px;">
+		<button id="submit" onClick="displayanswer()">Submit</button> 
+		<p id="displaymsg"></p>
+		</div>
+	</div>
+	<script src="script.js"></script>
+	<footer>
+            <p>Adapted from Romeo Jeremiah's <a href="https://github.com/romeojeremiah/whack-a-mole">Whack-a-Mole</a> by <a href="http://usablesecurity.net/">HATS Indiana University</a> under standard MIT license. Images sourced from Wikimedia Commons. </p>
+    </footer>
 </body>
 
 </html>

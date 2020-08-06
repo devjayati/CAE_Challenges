@@ -1,39 +1,76 @@
 html {
-    font-size: 35px;
-    background: #98BCF4;
+    font-size: 20px;
 }
 
 body {
     padding: 0;
     margin: 0;
     text-align: center;
+	font-family: Alegreya Sans, Verdana;
 }
 
-h1 {
+h2 {
     text-align: center;
-    font-size: 100px;
+    font-size: 30px;
     line-height: 1;
     margin-bottom: 0;
+	margin: auto;
+	width: 60%;
+	border: 3px solid #900314;
+	padding: 50px;
 }
 
 .score {
-    background:blue;
-    padding: 0 48px;
+    /*background:red;
+    padding: 0 20px;
     line-height: 1;
     border-radius: 16px;
     color: #fff;
-    margin-left: 15px;
+    margin-left: 15px;*/
+	display: block;
+    margin-bottom: 30px;
+    border: 3px solid #900314;
+	margin: auto;
+    /*width: fit-content;*/
+    padding: 20px;
+    margin-bottom: 20px;
 }
-
+#submit {
+	background-color: green;
+    padding: 20px;
+    margin: 20px auto;
+    height: fit-content;
+}
+#displaymsg { 
+    margin: 20px auto;
+    position: relative;
+    /* left: 45%; */
+    top: 50%;
+	padding: 20px;
+}
 .game {
     width: 600px;
     height: 400px;
     display:flex;
     flex-wrap:wrap;
     margin: 0 auto;
-    
+  
 }
+#dropDown {
+	
+    padding: 20px;
+    font-size: 25px;
+    margin-bottom: 20px;
+    border-color: #900314;
 
+}
+.wrap {
+	/*background:red;*/
+    border: 3px solid #900314;
+    padding: 20px;
+    width: fit-content;
+    margin: auto;
+}
 .hole{
     flex: 1 0 33.33%;
     overflow: hidden;
@@ -66,7 +103,7 @@ h1 {
     top:0;
 }
 
-button{
+/*button{
     width:175px;
     font-size: 35px;
     height: 70px;
@@ -75,7 +112,53 @@ button{
     border-radius: 10px;
     margin-left: 20px;
     margin-top: 90px;
+	text-align: center;
+	position: center;
+}*/
+button { 
+/*margin: 20px;*/
+  position: absolute;
+  /*top: 50%;*/
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  background-color: #900314;
+  border-radius: 10px;
+  width:175px;
+  color: white;
+  height: 50px;
+
 }
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+    width: 60%;
+    margin: auto;
+	margin-top: 20px;
+    border: 3px solid #900314;
+    font-size: 25px;
+}
+
+.col-25 {
+  /*float: left;
+  width: 25%;
+  margin-top: 6px;*/
+  margin: 20px auto;
+}
+
+#answer {
+	padding: 20px;
+    margin: 20px auto;
+    font-size: 25px;
+    border: 3px solid green;
+}
+/*.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}*/
 
 @media (min-width: 667px) and (max-width: 1024px){
     
@@ -83,11 +166,11 @@ button{
         display: none;
     }
     .score {
-    background:blue;
+    /*background:blue;*/
     padding: 0 12px;
     line-height: 1;
-    border-radius: 16px;
-    color: #fff;
+    /*border-radius: 16px;
+    color: #fff;*/
     font-size: 40px;
     margin-left: 20px;
 }
@@ -128,7 +211,7 @@ button{
 
     .hole:after{
         display:block;
-        background: url(dirt.png) bottom center no-repeat;
+        background: url('dirt.png') bottom center no-repeat;
         background-size:contain;
         content: '';
         max-width: 70%;
