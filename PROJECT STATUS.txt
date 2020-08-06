@@ -1,7 +1,7 @@
 Complete?: 
-http://cgi.soic.indiana.edu/~jdev/CryptoLesson3/ 
+http://cgi.soic.indiana.edu/~jdev/CryptoLesson3/ (settings at top, and flag submit)
 http://cgi.soic.indiana.edu/~jdev/PasswordLesson1/
-http://cgi.soic.indiana.edu/~jdev/EthicalHackingLesson1/ 
+http://cgi.soic.indiana.edu/~jdev/EthicalHackingLesson1/ (need instructions, explanation, and submit, levels)
 http://cgi.soic.indiana.edu/~jdev/SocialLesson1/ 
 
 Minor tasks left : 
