@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 
 //create db
-$sql = "CREATE DATABASE EHlesson1";
+$sql = "CREATE DATABASE CAEFlags";
 if ($conn->query($sql) === TRUE) {
   echo "Database created successfully";
 } else {

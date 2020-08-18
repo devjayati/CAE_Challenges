@@ -381,7 +381,7 @@ function nextQuestion(){
         //submit agreement
         //open sites
         //please wait
-        $("#question").html("<h2>Challenge complete! 123456 is your completion flag.</h2>");
+        $("#question").html("<hr><form action='action.php' method='get'><input type='submit' name='submit' value='Submit' style='background-color: #6B8E23;border: none;color: white;text-align: center;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;padding: 12px 28px;'></input></form>");
         convertCheckboxesToHiddens();
         $("#nextbutton").hide();
         showFinish();
@@ -1288,14 +1288,14 @@ var validationQuestions = [
 ];
 
 var cultureQuestions = [
-    {
-        type:'radio',
-				question:'Was this challenge fun?',
-				options:[
-					'Yeah!',
-					'Nope.',
-					]
-    }
+    //{
+    //    type:'radio',
+	//			question:'Was this challenge fun?',
+	//			options:[
+	//				'Yeah!',
+	//				'Nope.',
+	//				]
+    //}
 ];
 
 var skill_questions = [

@@ -1,7 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "netfire7";
-$password = "password";
+$servername = "db.sice.indiana.edu";
+$username = "phishingsummer19";
+$password = "DK-PS-Nineteen";
+$db = "databasename";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -13,7 +14,8 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 
 //create db
-$sql = "CREATE DATABASE EHlesson1";
+//NEW: no need to create database - need to check with the existing table and see if the values match. If they match, then show success.html else show error.html
+$sql = "CREATE DATABASE test";
 if ($conn->query($sql) === TRUE) {
   echo "Database created successfully";
 } else {
