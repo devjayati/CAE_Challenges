@@ -137,19 +137,29 @@ function test() {
 	   flag = 3; 
 	   //alert("game 3");
       }
+	  //'<%Session["levels"] = "' + flag + '"; %>';
 }
-function displayanswer() {
-	console.log(flag);
-	if(document.getElementById("answer").value == "123456" && flag == 1) {
-		document.getElementById("displaymsg").innerHTML = "Correct! Your flag is 8456.";
-	}
-	else if ((document.getElementById("answer").value == "624624" && flag == 2) || (document.getElementById("answer").value == "246246" && flag == 2)) {
-		document.getElementById("displaymsg").innerHTML = "Correct! Your flag is 4562.";
-	}
-	else if ((document.getElementById("answer").value == "RANDOM" && flag == 3) || (document.getElementById("answer").value == "random" && flag == 3)) {
-		document.getElementById("displaymsg").innerHTML = "Correct! Your flag is 7894.";
-	}
-	else {
-		document.getElementById("displaymsg").innerHTML = "Incorrect! Try again.";
-	}
+// function displayanswer() {
+	// console.log(flag);
+	// if(document.getElementById("answer").value == "123456" && flag == 1) {
+		// document.getElementById("displaymsg").innerHTML = "Correct! Your flag is 8456.";
+	// }
+	// else if ((document.getElementById("answer").value == "624624" && flag == 2) || (document.getElementById("answer").value == "246246" && flag == 2)) {
+		// document.getElementById("displaymsg").innerHTML = "Correct! Your flag is 4562.";
+	// }
+	// else if ((document.getElementById("answer").value == "RANDOM" && flag == 3) || (document.getElementById("answer").value == "random" && flag == 3)) {
+		// document.getElementById("displaymsg").innerHTML = "Correct! Your flag is 7894.";
+	// }
+	// else {
+		// document.getElementById("displaymsg").innerHTML = "Incorrect! Try again.";
+	// }
+// }
+function check() {
+  if (document.getElementById("answer").value!="") {
+    document.getElementById("submit").style.display = "block";
+  } else {
+    document.getElementById("submit").style.display = "none";
+    return false;
+  }
 }
+

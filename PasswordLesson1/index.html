@@ -65,13 +65,15 @@
 			<div class="col-75">
 				<label for="answer">Please enter the 6-digit pattern. Type in RANDOM if you think there is no pattern.</label>
 			</div>
+			<form action="action.php" method="get">
 		<div class="col-25">
-			<input type="text" id="answer" name="firstname" placeholder="Your answer..">
+			<input type="text" id="answer" name="answer" placeholder="Your answer..">
 		</div>
 		<div style="height:100px;">
-		<button id="submit" onClick="displayanswer()">Submit</button> 
-		<p id="displaymsg"></p>
+		<input type="submit" name="firstname" id="submit" style="color: white;font-family: Alegreya Sans, Verdana;font-size: 20px;"></input> 
+		<!--p id="displaymsg" name="displaymsg"></p-->
 		</div>
+		</form>
 	</div>
 	<script src="script.js"></script>
 	<footer>

@@ -290,10 +290,12 @@ function handleCardDrop( event, ui ) {
 </div>
 
 <div id="successMessage">
-    <h2>You got them all correct! Please click 'Submit' to complete the challenge.</h2>
-	<button onclick="init()" style="background: chocolate;padding: 10px;color: white;border: 1px solid;border-radius: 10px;">Reset</button>
+    <h2>Please click 'Submit' to complete the challenge.</h2>
+	<button onclick="init()" style="background-color:chocolate; color:white;font-family: Alegreya Sans, Verdana;font-size: 20px;font-weight: bold;">Reset</button>
 	<form action="action.php" method="get">
-	<input type="submit" name="submit" value="Submit" style="background-color:green; color:white;font-family: Alegreya Sans, Verdana;font-size: 20px;font-weight: bold"></input>
+	<input type="submit" name="submit" value="Submit" style="background-color:green; color:white;font-family: Alegreya Sans, Verdana;font-size: 20px;font-weight: bold;"></input>
+	<!--hidden input for number of correctcards = 18 -->
+	<input type="hidden" id="correctcards" name="correctcards" value="18">
 	</form>
   </div>
 

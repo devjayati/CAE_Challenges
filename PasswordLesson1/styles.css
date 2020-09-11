@@ -40,6 +40,9 @@ h2 {
     padding: 20px;
     margin: 20px auto;
     height: fit-content;
+	font-family: Alegreya Sans, Verdana;
+	font-size: 20px;
+	color: white;
 }
 #displaymsg { 
     margin: 20px auto;

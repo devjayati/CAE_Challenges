@@ -1,12 +1,5 @@
-Complete?: 
-http://cgi.soic.indiana.edu/~jdev/CryptoLesson3/ (settings at top, and flag submit)
-http://cgi.soic.indiana.edu/~jdev/PasswordLesson1/
-http://cgi.soic.indiana.edu/~jdev/EthicalHackingLesson1/ (need instructions, explanation, and submit, levels)
-http://cgi.soic.indiana.edu/~jdev/SocialLesson1/ 
-
-Minor tasks left : 
-http://cgi.soic.indiana.edu/~jdev/SocialLesson3/ (bitmapping)
-http://cgi.soic.indiana.edu/~jdev/EthicalHackingLesson2/ (add text to cards and CSS accordingly)
+Complete:
+CryptoLesson3 (All three levels)
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
