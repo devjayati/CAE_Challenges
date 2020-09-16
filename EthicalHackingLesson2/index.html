@@ -19,10 +19,10 @@ function init() {
   // Hide the success message
   $('#successMessage').hide();
   $('#successMessage').css( {
-    left: '580px',
-    top: '250px',
-    width: 0,
-    height: 0
+    //left: '580px',
+    //top: '250px',
+    //width: 0,
+    //height: 0
   } );
 
   // Reset the game
@@ -35,7 +35,7 @@ function init() {
 
   // Create the pile of vulnerabilities
   var numbers = [ 1, 2, 3, 4, 5, 6 ];
-  var terms = ['V1', 'V2', 'V3', 'V4', 'V5', 'V6' ];
+  var terms = ['Physical', 'Access Control', 'Interaction', 'Logical', 'Coding', 'Human' ];
 
   for ( var i=0; i<6; i++ ) {
     $('<div>' + terms[i] + '</div>').data( 'number', numbers[i] ).attr( 'id', 'card'+numbers[i] ).appendTo( '#cardPile' ).draggable( {
@@ -47,7 +47,7 @@ function init() {
   }
    // Create the harm cards
 	var numbers2 = [ 1, 2, 3, 4, 5, 6 ];
-	var terms2 = [ 'H1', 'H2', 'H3', 'H4', 'H5', 'H6' ];
+	var terms2 = [ 'Financial Loss', 'Falsified Information', 'Physical Harm', 'Denial of Service', 'Loss of Privacy', 'Device Takeover' ];
 
   for ( var i=0; i<6; i++ ) {
     $('<div>' + terms2[i] + '</div>').data( 'number', numbers2[i] ).attr( 'id', 'card'+numbers2[i] ).appendTo( '#cardSlots' ).draggable( {
@@ -60,7 +60,7 @@ function init() {
   //Create the threat cards
   // Create the harm cards
 	var numbers3 = [ 1, 2, 3, 4, 5, 6 ];
-	var terms3 = [ 'T1', 'T2', 'T3', 'T4', 'T5', 'T6' ];
+	var terms3 = [ 'Criminal Org.', 'Insider Threat', 'Amateur Hackers', 'Nation State', 'Professional Hacker', 'Social Engineer' ];
 
   for ( var i=0; i<6; i++ ) {
     $('<div>' + terms3[i] + '</div>').data( 'number', numbers3[i] ).attr( 'id', 'card'+numbers3[i] ).appendTo( '#cardThreats' ).draggable( {
@@ -228,14 +228,16 @@ function handleCardDrop( event, ui ) {
   // and reset the cards for another go
 
   if ( correctCards == 18 ) {
-    $('#successMessage').show();
-    $('#successMessage').animate( {
-      left: '380px',
-      top: '200px',
-      width: '100%',
-      height: '100px',
-      opacity: 1
-    } );
+    $('#content').hide();
+	$('#successMessage').show();
+    <!-- $('#successMessage').animate( { -->
+      <!-- left: '380px', -->
+      <!-- top: '200px', -->
+      <!-- width: '100%', -->
+      <!-- height: '100px', -->
+      <!-- opacity: 1 -->
+    <!-- } ); -->
+	
   }
 
 }
@@ -254,34 +256,34 @@ function handleCardDrop( event, ui ) {
 <div id="content">
 
   <div id="cardPile"> </div>
-  <div id="cardSlots"> </div>
   <div id="cardThreats"> </div>
-  <div id="scenario1" class="scenario"> <p> Scenario 1: Blah. </p>
+    <div id="cardSlots"> </div>
+  <div id="scenario1" class="scenario"> <p> Scenario 1: Paid criminals find blueprints improperly thrown away in the trash behind supercorp research headquarters. </p>
 	<div id="scenevuln1"></div>
 	<div id="scenethre1"></div>
 	<div id="sceneharm1"></div>
   </div>
-  <div id="scenario2" class="scenario"> <p> Scenario 2: Blah. </p> <!--p> adding the matched pairs here </p-->
+  <div id="scenario2" class="scenario"> <p> Scenario 2: Weekend guard logs into server and changes database information on potential cancer cure in order to hurt his employer for not giving him a raise. </p> <!--p> adding the matched pairs here </p-->
 	<div id="scenevuln2"></div>
 	<div id="scenethre2"></div>
 	<div id="sceneharm2"></div>
   </div>
-  <div id="scenario3" class="scenario"> <p> Scenario 3: Blah. </p><!--p> adding the matched pairs here </p-->
+  <div id="scenario3" class="scenario"> <p> Scenario 3: Door lock maker finds out that some young teens have found a way to unlock someone’s front door by yelling at their Alexa’s from outside and getting the alexa to unlock the door and then vandalizing the home. </p><!--p> adding the matched pairs here </p-->
 	<div id="scenevuln3"></div>
 	<div id="scenethre3"></div>
 	<div id="sceneharm3"></div>
   </div>
-  <div id="scenario4" class="scenario"> <p> Scenario 4: Blah. </p><!--p> adding the matched pairs here </p-->
+  <div id="scenario4" class="scenario"> <p> Scenario 4: North Korea’s cybersecurity attack team finds a logical failure deep in a commonly used elevator controller. If they disable the warplane elevator in every US Aircraft carrier’s - giving North Korea a way to make our ships unusable in combat. </p><!--p> adding the matched pairs here </p-->
 	<div id="scenevuln4"></div>
 	<div id="scenethre4"></div>
 	<div id="sceneharm4"></div>
   </div>
-  <div id="scenario5" class="scenario"> <p> Scenario 5: Blah. </p><!--p> adding the matched pairs here </p-->
+  <div id="scenario5" class="scenario"> <p> Scenario 5: MegaSafeView sells a line of home surveillance cameras. Their product is a collection of technologies from other companies, one of whom hard coded a backdoor password into their component without informing MegaSafeView.  Months later customers find out their camera images have been hijacked and shared on the dark web. </p><!--p> adding the matched pairs here </p-->
 	<div id="scenevuln5"></div>
 	<div id="scenethre5"></div>
 	<div id="sceneharm5"></div>
   </div>
-  <div id="scenario6" class="scenario"> <p> Scenario 6: Blah. </p><!--p> adding the matched pairs here </p-->
+  <div id="scenario6" class="scenario"> <p> Scenario 6: One night a high level executive gets a call from a smooth talking person from tech support.  The caller knows him well  Shortly after their call, his phone is no longer under his control.  Calling into work from another line he finds out no one from the company called him. </p><!--p> adding the matched pairs here </p-->
 	<div id="scenevuln6"></div>
 	<div id="scenethre6"></div>
 	<div id="sceneharm6"></div>
@@ -289,10 +291,10 @@ function handleCardDrop( event, ui ) {
 
 </div>
 
-<div id="successMessage">
+<div id="successMessage" class="popup">
     <h2>Please click 'Submit' to complete the challenge.</h2>
-	<button onclick="init()" style="background-color:chocolate; color:white;font-family: Alegreya Sans, Verdana;font-size: 20px;font-weight: bold;">Reset</button>
-	<form action="action.php" method="get">
+	<!--button onclick="reset()" style="background-color:chocolate; color:white;font-family: Alegreya Sans, Verdana;font-size: 20px;font-weight: bold;margin:20px;">Reset</button-->
+	<form action="success.html" method="get">
 	<input type="submit" name="submit" value="Submit" style="background-color:green; color:white;font-family: Alegreya Sans, Verdana;font-size: 20px;font-weight: bold;"></input>
 	<!--hidden input for number of correctcards = 18 -->
 	<input type="hidden" id="correctcards" name="correctcards" value="18">

@@ -46,17 +46,17 @@ h2, h3, h4 {
  
 #cardSlots {
   /*margin: 0 auto;*/
-  background: yellow;
+  background: red;
   float: left;
 }
 #cardPile {
   /*margin: 0 auto;*/
-  background: orange;
+  background: yellow;
   float: left;
 }
 #cardThreats {
   /*margin: 0 auto;*/
-  background: red;
+  background: orange;
   float: left;
 }
 .scenario {
@@ -141,12 +141,12 @@ h2, h3, h4 {
  
 /* Individually coloured cards */
  
-#card1.correct { background: purple; }
-#card2.correct { background: blue; }
-#card3.correct { background: green; }
-#card4.correct { background: yellow; }
-#card5.correct { background: orange; }
-#card6.correct { background: red; }
+#card1.correct { background: #815166; }
+#card2.correct { background: #f3c54c; }
+#card3.correct { background: #fdf0b5; }
+#card4.correct { background: #5c6f6f; }
+#card5.correct { background: #64bcff; }
+#card6.correct { background: #1c1933; }
  
  
 /* "You did it!" message */
@@ -170,4 +170,13 @@ h2, h3, h4 {
   -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
   box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
   padding: 20px;*/
+}
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

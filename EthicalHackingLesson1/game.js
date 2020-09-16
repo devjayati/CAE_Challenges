@@ -19,7 +19,7 @@
 				//level3 explanation
 				var exp3 = ["", "", "", "", "", ""];
 				//level1 order 
-				var order1 = [3,3,2, 1,2,3]; // 3 = green; 2 = yellow; 1 = red
+				var order1 = [3,3,2,1,2,3]; // 3 = green; 2 = yellow; 1 = red
 				//level2 order 
 				var order2 = [1,2,1,3,3,2];
 				//level3 order
@@ -159,7 +159,7 @@
 						document.getElementById("item").innerHTML = scenario[i];
 				   }
 				   else { 
-						document.getElementById("next").innerHTML = "Submit and Get Flag";
+						document.getElementById("next").innerHTML = "Submit";
 				   }
 				   //flag = 1; 
 				   //alert("game 1");
@@ -172,7 +172,7 @@
 						document.getElementById("item").innerHTML = scenario[i];
 				   }
 				   else { 
-						document.getElementById("next").innerHTML = "Submit and Get Flag";
+						document.getElementById("next").innerHTML = "Submit";
 				   }
 				  } else if(dropDown.value == "three"){
 				   //difficult order
@@ -183,7 +183,7 @@
 						document.getElementById("item").innerHTML = scenario[i];
 				   }
 				   else { 
-						document.getElementById("next").innerHTML = "Submit and Get Flag";
+						document.getElementById("next").innerHTML = "Submit";
 				   }
 				}
 			}
