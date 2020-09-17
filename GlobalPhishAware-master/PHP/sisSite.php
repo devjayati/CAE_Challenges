@@ -120,7 +120,7 @@ $_SESSION['sisStart'] = true;
 <div id="jscriptwarning">You must have javascript enabled to take this study.</div>
 <div id="sis">
 
-<center><H1>Social Lesson 4</H1></center><p>
+<center><H1>Social Lesson 3</H1></center><p>
 		<center><H3> This challenge seeks to understand how you decide whether or not it is secure to sign-in to different websites on the Internet. Read the following instructions very carefully.</H3></center>
 					<br>							
 			<ul>

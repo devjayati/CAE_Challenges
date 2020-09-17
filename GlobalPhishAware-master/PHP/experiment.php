@@ -95,8 +95,8 @@ echo "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://
 
 
 </style>
-<script src=\"http://cgi.soic.indiana.edu/~jdev/GlobalPhishAware-master/JS/jquery-1.11.0.js\" type=\"text/javascript\"></script>
-<script src=\"http://cgi.soic.indiana.edu/~jdev/GlobalPhishAware-master/JS/experiment.js\" type=\"text/javascript\"></script>
+<script src=\"../JS/jquery-1.11.0.js\" type=\"text/javascript\"></script>
+<script src=\"../JS/experiment.js\" type=\"text/javascript\"></script>
 </head>
 <body>
 

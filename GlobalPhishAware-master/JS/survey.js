@@ -381,7 +381,7 @@ function nextQuestion(){
         //submit agreement
         //open sites
         //please wait
-        $("#question").html("<h2>Challenge complete! 123456 is your completion flag.</h2>");
+        $("#question").html("<h2>Challenge complete! w3Lc0m3!HERE is your completion flag.</h2>");
         convertCheckboxesToHiddens();
         $("#nextbutton").hide();
         showFinish();
