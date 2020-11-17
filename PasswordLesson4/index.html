@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="function.js"></script>
+<title>Password Lesson 4</title>
+</head>
+
+<body>
+<div id="header">
+	<h2>Password Lesson 4: Multi-Factor Authentication</h2>
+	<p>In this challenge, you will have to select the second factor which seems to be the most appropriate for the given scenario</p> 
+</div>
+
+<div id="main-content">
+	<div id="scenario">
+		<p> You are a journalist and you have already entered a password to secure your email inbox where you receive tip offs from confidential sources who need to be protected. You need another level of authentication with with something that you can have in remote locations. What will you choose? </p>
+	</div>
+	<div id="options">
+		<input type="hidden" class="scene" id="41"/>
+		<div id="option1"><input type="image" id="img2" class="img" src="fingerprint.jpg" onclick="myFunction1()" /><p>Your fingerprint</p></div>
+		<div id="option2"><input type="image" id="img1" class="img" src="otp.png" onclick="myFunction2()"/><p>A one-time password on your phone</p></div>
+		<div id="option3"><input type="image" id="img3" class="img" src="secq.png" onclick="myFunction3()"/><p>Answer security questions that you can recall easily</p></div>
+		<br style="clear: left;" />
+	</div>
+	<div id="results">
+		<p id="display-results"> Show/ Hide </p>
+		<div id="next-button">
+			<form action="index2.html">
+				<input type="submit" class="button" value="Next" />
+			</form>
+		</div>
+	</div>
+</div>
+
+<div id="footer">
+	<p> © 2020. Developed by <a href="http://usablesecurity.net/">HATS Indiana University</a> under the Creative Commons license.</p> 
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="function.js"></script>
+<title>Ethical Hacking Lesson 3</title>
+</head>
+
+<body>
+<h2>Ethical Hacking Lesson 3: Ethics of Vulnerability Disclosure</h2>
+<h4> In this challenge, you have to read the scenario and decide if the vulnerability in the system has been disclosed ethically or not by choosing your own method of disclosure.  </h4> 
+<div id="main">	
+	<div id="content">
+		<img src="trucks.png" id="news" alt="Driveless Trucks">
+		<p id="text"> Driverless trucks have revolutionized long haul trucking. These giant machines travel roads without someone needing to be behind the wheel by utilizing GPS. A researcher was investigating the security of the GPS updating system and discovered that it is relatively easy for someone to insert their own maps into this update, this could potentially cause a truck to turn left when it needs to go straight. This could cause mass accidents. </p> 
+		
+	</div>
+	<div id="panel">
+		<!--p> What is one possible way you can hack into this system? </p>
+		<br> 
+		<input type="text" id="method" name="method1"-->
+		<p><strong> How do you think this vulnerability should be disclosed?</strong> </p> 
+		<input type="radio" name="disclose" id="public" onclick="myFunction()">Publicly, possibly through media outlets<br>
+		<input type="radio" name="disclose" id="private" onclick="myFunction()">Privately, only to the companies involved<br>
+		<input type="radio" name="disclose" id="mixed" onclick="myFunction()">Through a public-private coordinated disclosure<br>
+		<input type="radio" name="disclose" id="none" onclick="myFunction()">Did not disclose at all till it was widely known<br>
+		<!--p> <strong> this section will show if they are correct or not </strong> </p> 
+		<p> <strong> Do you think they were right in doing so? </strong> </p>
+		<input type="radio" name="permission" id="yes">Yes, what they did makes sense <br>
+		<input type="radio" name="permission" id="no">No, I don't think so<br-->
+
+	</div>
+	<div style="clear: both;" > </div>
+</div>
+<div id="results">
+		<p id="display-results"> Show/ Hide </p>
+		<div id="next-button">
+			<form action="index6.html">
+				<input type="submit" class="button" value="Next" />
+			</form>
+		</div>
+	</div>
+
+<div id="footer">
+	<p> Created by <a href="http://usablesecurity.net/">HATS Indiana University</a> under the MIT license.</p>
+</div>
+<script type="text/javascript" src="imageMapResizer.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">		
+		imageMapResize();
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="function.js"></script>
+<title>Password Lesson 4</title>
+</head>
+
+<body>
+<div id="header">
+	<h2>Password Lesson 4: Multi-Factor Authentication</h2>
+	<p>In this challenge, you will have to select the second factor which seems to be the most appropriate for the given scenario</p> 
+</div>
+
+<div id="main-content">
+	<div id="scenario">
+		<p> For practical purposes, companies often use a combination of authentication techniques after users have entered their login ID and password. Which of these combinations of MFA do you think is the most secure? </p>
+	</div>
+	<div id="options">
+		<input type="hidden" class="scene" id="45"/>
+		<div id="option1"><input type="image" class="img" src="comboemail.png" onclick="myFunction1()"/><p>Security Questions + Email OTP</p></div>
+		<div id="option2"><input type="image" class="img" src="combobio.png" onclick="myFunction2()" /><p>PIN + Biometric</p></div>
+		<div id="option3"><input type="image" class="img" src="combolocation.png" onclick="myFunction3()"/><p>OTP on Mobile App + Location</p></div>
+		<br style="clear: left;" />
+	</div>
+	<div id="results">
+		<p id="display-results"> Show/ Hide </p>
+		<div id="next-button">
+			<form action="success.html">
+				<input type="submit" class="button" value="Next" />
+			</form>
+		</div>
+	</div>
+</div>
+
+<div id="footer">
+	<p> © 2020. Developed by <a href="http://usablesecurity.net/">HATS Indiana University</a> under the Creative Commons license.</p> 
+</div>
+</body>
+</html>
