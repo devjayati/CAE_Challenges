@@ -31,6 +31,9 @@ img {
   width: 50%;
   height: auto;
 }
+img:hover {
+  transform: scale(1.5);
+}
 .button {
   /*background-color: #4CAF50;*/
   background-color: #ff1e00;
