@@ -13,6 +13,38 @@
 	<p>Now you have to decide if the email below is phished or not.</p> 
 </div>
 
+<?php 
+
+$servername = "db.sice.indiana.edu";
+$username = "phishingsummer19";
+$password = "DK-PS-Nineteen";
+$db = "phishingsummer19";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $db);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+$last_id = $conn->insert_id;
+console.log($last_id);
+$sql = "SELECT * FROM sl5 WHERE id = '".$last_id."'";
+$result = $conn->query($sql);
+
+// input check echo $sql;
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+  }
+} else {
+  echo "0 results";
+}
+
+$conn->close();
+
+?>
 <div id="main-content">
 	<div id="scenario" style="text-align:left;">
 		<p> From: JPMorgan Chase Bank <br>
