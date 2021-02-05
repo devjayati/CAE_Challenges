@@ -18,7 +18,7 @@
 		<p> From: JPMorgan Chase Bank <br>
 			Date: Tue 2/2/2021 5:31 AM <br>
 			To: <?php $_SESSION["name"];?> <<?php $_SESSION["email"]?> > <br>
-			Subject: Netflix Automatic Payments <br>
+			Subject: Frault Alert <br>
 			Note: This message from trusted sender <br>
 			<hr>
 												References-ID#7329560
@@ -26,20 +26,18 @@
 
 			Dear <?php $_SESSION["name"]?>, <br><br>
 
-			This is a fraud alert. Let us know immediately if you, or anyone you authorized, changed your Executive Card beginning with [https://www.creditcardvalidator.org/capital-one]
-that was recently used for veterinary care. 
-Please confirm you used your Citi® / Capitol One  Executive Card ending for the transaction(s) noted below. You may not be able to make purchases on your  Executive Card until we hear back from you!
+			This is a fraud alert. Let us know immediately if you, or anyone you authorized, changed your Executive Card that was recently used for veterinary care. Please confirm you used your Citi® / Capitol One  Executive Card ending for the transaction(s) noted below by confirming your age. You may not be able to make purchases on your  Executive Card until we hear back from you! <br><br>
 
-Transaction: [name of vet/ local grocer/ employer]
-
-Please login here to confirm or deny payment:
-
+			Transaction: Kroger <br>
+			Amount: $356.67 <br>
+			Your age on our records: <?php $_SESSION["age"] ?> <br>
  
 			<br> 
-			<a href="https://usablesecurity.net/">Please click here to update your p͏a͏y͏m͏e͏n͏t͏ method.</a>
+			<a href="https://usablesecurity.net/">Please login here to confirm or deny payment.</a>
 			<br><br><br>
 			Regards, <br>
-			Netflix Team 
+			Capital One <br>
+			Digital Signature Verified <br>
 			<hr>
 	</div>
 	<div id="options">
@@ -48,7 +46,7 @@ Please login here to confirm or deny payment:
 	<div id="options">
 		<input type="hidden" class="scene" id="552"/>
 		<input type="button" class="option" value="Phishing Email" id="option1" onclick="myFunction1()"/>
-		<input type="button" class="option" value="Real Email" id="option2" onclick="myFunction2()" />
+		<input type="button" class="option" value="Spear Phishing Email" id="option2" onclick="myFunction2()" />
 		<br style="clear: left;" />
 	</div>
 	<div id="results">
