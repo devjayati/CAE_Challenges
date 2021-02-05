@@ -1,12 +1,21 @@
 <html>
+<link rel="stylesheet" type="text/css" href="style.css" />
 <body>
 <?php
 	$name = $_POST["name"]; 
 	$email = $_POST["email"];
 	$age = $_POST["age"];
 	$gender = $_POST["gender"];
+	$_SESSION["name"] = $name; 
+	$_SESSION["email"] = $email;
+	$_SESSION["age"] = $age;
+	$_SESSION["gender"] = $gender;
 ?>
-	Hello <?php echo $name; ?>!, we have received email address <?php echo $email; ?>, age <?php echo $age; ?> years and gender <?php echo $gender; ?>. Thanks! 
+	<p>Hello <?php echo $name; ?>!, You have entered the following information: <br>
+	Email address: <?php echo $email; ?> <br> 
+	Age: <?php echo $age; ?> years <br>
+	Gender: <?php echo $gender; ?> <br>
+	<hr> </p>
 	
 <?php 
 
@@ -31,7 +40,7 @@ VALUES ('$name', '$email', '$age', '$gender')";
 
 <?php 
 if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
+  //echo "New record created successfully";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
@@ -42,7 +51,7 @@ $conn->close();
 
 <div id="next-button">
 	<form action="email1.html">
-		<input type="submit" class="button" value="Next" />
+		<input type="submit" class="button" value="Let's look at Emails" />
 	</form>
 </div>
 </body>
