@@ -39,6 +39,12 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 
 ?>
+
+<div id="next-button">
+	<form action="email1.html">
+		<input type="submit" class="button" value="Next" />
+	</form>
+</div>
 </body>
 </html>
 
