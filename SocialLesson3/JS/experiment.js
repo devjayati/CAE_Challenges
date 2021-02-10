@@ -8,8 +8,8 @@ winMapDict = {
 //'adobe':'<map id="scaleMap0" name="adobe_map"><area target="" alt="adobe_tool_back" title="adobe_tool_back" href="javascript:advanceExperiment(\'back\')" coords="20,54,30" shape="circle"><area target="" alt="adobe_tool_signin" title="adobe_tool_signin" href="javascript:advanceExperiment(\'login\')" coords="1695,209,1791,182" shape="rect"><area target="" alt="adobe_tool_signin" title="adobe_tool_signin" href="javascript:advanceExperiment(\'login\')" coords="108,128,526,291" shape="rect"></map>',
 //'airbnb12':'<map id="scaleMap0" name="airbnb12_map"><area target="" alt="airbnb_control_back" title="airbnb_control_back" href="javascript:advanceExperiment(\'back\')" coords="18,51,23" shape="circle"><area target="" alt="airbnb_control_login" title="airbnb_control_login" href="javascript:advanceExperiment(\'login\')" coords="1832,129,1895,93" shape="rect"></map>',
 //'airbnb':'<map id="scaleMap0" name="airbnb_map"><area target="" alt="AIRBNB_TOOL_BACK" title="AIRBNB_TOOL_BACK" href="javascript:advanceExperiment(\'back\')" coords="18,51,23" shape="circle"><area target="" alt="AIRBNB_TOOL_LOGIN" title="AIRBNB_TOOL_LOGIN" href="javascript:advanceExperiment(\'login\')" coords="1838,177,1897,212" shape="rect"></map>',
-'airbnb12':'<map id="scaleMap0" name="airbnb_map"><area target="" alt="airbnb_control_back" title="airbnb_control_back" href="javascript:advanceExperiment(\'back\')" coords="38,799,28" shape="circle"><area target="" alt="airbnb_control_login" title="airbnb_control_login" href="javascript:advanceExperiment(\'login\')" coords="283,707,369,777" shape="rect"></map>',
-'airbnb':'<map id="scaleMap0" name="airbnb_map"><area target="" alt="airbnb_tool_back" title="airbnb_tool_back" href="javascript:advanceExperiment(\'back\')" coords="38,799,28" shape="circle"><area target="" alt="airbnb_tool_login" title="airbnb_tool_login" href="javascript:advanceExperiment(\'login\')" coords="283,707,369,777" shape="rect"></map>',
+//'airbnb12':'<map id="scaleMap0" name="airbnb_map"><area target="" alt="airbnb_control_back" title="airbnb_control_back" href="javascript:advanceExperiment(\'back\')" coords="38,799,28" shape="circle"><area target="" alt="airbnb_control_login" title="airbnb_control_login" href="javascript:advanceExperiment(\'login\')" coords="283,707,369,777" shape="rect"></map>',
+//'airbnb':'<map id="scaleMap0" name="airbnb_map"><area target="" alt="airbnb_tool_back" title="airbnb_tool_back" href="javascript:advanceExperiment(\'back\')" coords="38,799,28" shape="circle"><area target="" alt="airbnb_tool_login" title="airbnb_tool_login" href="javascript:advanceExperiment(\'login\')" coords="283,707,369,777" shape="rect"></map>',
 //'aliexpress12':'<map id="scaleMap0" name="aliexpress12_map"><area target="" alt="ALIEX_CONTROL_BACK" title="ALIEX_CONTROL_BACK" href="javascript:advanceExperiment(\'back\')" coords="18,53,31" shape="circle"><area target="" alt="ALIEX_CONTROL_LOGIN" title="ALIEX_CONTROL_LOGIN" href="javascript:advanceExperiment(\'login\')" coords="1418,257,1513,221" shape="rect"></map>',
 //'aliexpress':'<map id="scaleMap0" name="aliexpress_map"><area target="" alt="ALIEX_TOOL_BACK" title="ALIEX_TOOL_BACK" href="javascript:advanceExperiment(\'back\')" coords="17,56,26" shape="circle"><area target="" alt="ALIEX_TOOL_LOGIN" title="ALIEX_TOOL_LOGIN" href="javascript:advanceExperiment(\'login\')" coords="1418,341,1513,307" shape="rect"></map>',
 //'amazon12':'<map id="scaleMap0" name="amazon12_map"><area target="" alt="AMAZON_CONTROL_BACK" title="AMAZON_CONTROL_BACK" href="javascript:advanceExperiment(\'back\')" coords="17,52,27" shape="circle"><area target="" alt="AMAZON_CONTROL_LOGIN" title="AMAZON_CONTROL_LOGIN" href="javascript:advanceExperiment(\'login\')" coords="1471,167,1600,133" shape="rect"></map>',
@@ -162,7 +162,7 @@ var experimentalConditions = ["Speed","Accuracy"];
 
 //taskOrder
 var tasks = [
-  {"taskSite":"airbnb","pages":2,"condition":"EV"},
+ // {"taskSite":"airbnb","pages":2,"condition":"EV"},
 //  {"taskSite":"battle","pages":2,"condition":"EV"},
 //  {"taskSite":"dropbox","pages":2,"condition":"EV"},
 //  {"taskSite":"ebay","pages":2,"condition":"EV"},
@@ -213,7 +213,7 @@ var taskDifficulty = [
 ];
 
 //var presentationIndex = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];
-var presentationIndex = [0,1,2,3,4,5];
+var presentationIndex = [0,1,2,3,4];
 var nTrials = tasks.length;
 
 function disableF5(e) { if ((e.which || e.keyCode) == 116 || (e.which || e.keyCode) == 82) e.preventDefault(); }

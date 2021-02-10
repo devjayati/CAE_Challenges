@@ -21,16 +21,16 @@ $password = "DK-PS-Nineteen";
 $db = "phishingsummer19";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $db);
+$x = new mysqli($servername, $username, $password, $db);
 
 // Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+if ($x->connect_error) {
+  echo "Connection failed: " . $x->connect_error;
 }
-$last_id = $conn->insert_id;
+$last_id = $x->insert_id;
 console.log($last_id);
 $sql = "SELECT * FROM sl5 WHERE id = '".$last_id."'";
-$result = $conn->query($sql);
+$result = $x->query($sql);
 
 // input check echo $sql;
 if ($result->num_rows > 0) {
@@ -42,7 +42,7 @@ if ($result->num_rows > 0) {
   echo "0 results";
 }
 
-$conn->close();
+$x->close();
 
 ?>
 <div id="main-content">
