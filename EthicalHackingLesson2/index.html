@@ -11,6 +11,7 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
 <script type="text/javascript">
 
+var flag = 1;
 var correctCards = 0;
 $( init );
 
@@ -26,7 +27,7 @@ function init() {
   } );
 
   // Reset the game
-  correctCards = 0;
+  //correctCards = 0;
   $('#cardPile').html( '' );
   $('#cardSlots').html( '' );
   $('#cardThreats').html( '' );
@@ -80,6 +81,7 @@ function init() {
   //}
 
 //scenario1
+if(flag ==1){
 	var scene1 = [ 'vulnerabilities', 'harms', 'threats'];
     $('<div>' + scene1[0] + '</div>').data( 'number', 1 ).appendTo( '#scenevuln1' ).droppable( {
       accept: '#cardPile div',
@@ -101,6 +103,8 @@ function init() {
 	//document.getElementById("scenario2").style.display = "block";
 	//alert("hello");
 	//alert(document.getElementbyId("scenevuln1").value);
+}
+if(flag ==2){
 	//scenario2
 	var scene2 = [ 'vulnerabilities', 'harms', 'threats'];
     $('<div>' + scene2[0] + '</div>').data( 'number', 2 ).appendTo( '#scenevuln2' ).droppable( {
@@ -120,8 +124,9 @@ function init() {
       hoverClass: 'hovered',
       drop: handleCardDrop
     } );
-	
+}	
 	//scenario3
+if(flag ==3){
 	var scene3 = [ 'vulnerabilities', 'harms', 'threats'];
     $('<div>' + scene3[0] + '</div>').data( 'number', 3 ).appendTo( '#scenevuln3' ).droppable( {
       accept: '#cardPile div',
@@ -140,9 +145,10 @@ function init() {
       hoverClass: 'hovered',
       drop: handleCardDrop
     } );
-	
+}
 	//scenario4
-	var scene4 = [ 'vulnerabilities', 'harms', 'threats'];
+if(flag ==4){
+	var scene4 = ['vulnerabilities', 'harms', 'threats'];
     $('<div>' + scene4[0] + '</div>').data( 'number', 4 ).appendTo( '#scenevuln4' ).droppable( {
       accept: '#cardPile div',
       hoverClass: 'hovered',
@@ -160,8 +166,9 @@ function init() {
       hoverClass: 'hovered',
       drop: handleCardDrop
     } );
-	
+}	
 	//scenario5
+if(flag ==5){
 	var scene5 = [ 'vulnerabilities', 'harms', 'threats'];
     $('<div>' + scene5[0] + '</div>').data( 'number', 5 ).appendTo( '#scenevuln5' ).droppable( {
       accept: '#cardPile div',
@@ -180,8 +187,9 @@ function init() {
       hoverClass: 'hovered',
       drop: handleCardDrop
     } );
-	
+}	
 	//scenario6
+if(flag ==6){
 	var scene6 = [ 'vulnerabilities', 'harms', 'threats'];
     $('<div>' + scene6[0] + '</div>').data( 'number', 6 ).appendTo( '#scenevuln6' ).droppable( {
       accept: '#cardPile div',
@@ -200,6 +208,7 @@ function init() {
       hoverClass: 'hovered',
       drop: handleCardDrop
     } );
+}
 }
 
 function handleCardDrop( event, ui ) {
@@ -225,15 +234,46 @@ function handleCardDrop( event, ui ) {
     correctCards++;
 	console.log(correctCards);
   } 
-  
   // If all the cards have been placed correctly then display a message
   // and reset the cards for another go
 	if (correctCards == 3 ) {
 		$('#scenario1').hide();
 		document.getElementById("scenario2").style.display="block";
+		  // Reset the game
+		  flag = 2;
+			init();
+		}
+	if (correctCards == 6 ) {
+		$('#scenario2').hide();
+		document.getElementById("scenario3").style.display="block";
+		  // Reset the game
+		  flag = 3;
+			init();
+		}
+	if (correctCards == 9 ) {
+		$('#scenario3').hide();
+		document.getElementById("scenario4").style.display="block";
+		  // Reset the game
+		  flag = 4;
+			init();
+		}
+	if (correctCards == 12 ) {
+		$('#scenario4').hide();
+		document.getElementById("scenario5").style.display="block";
+		  // Reset the game
+		  flag = 5;
+			init();
+		}
+	if (correctCards == 15 ) {
+		$('#scenario5').hide();
+		document.getElementById("scenario6").style.display="block";
+		  // Reset the game
+		  flag = 6;
+			init();
 		}
   if ( correctCards == 18 ) {
     $('#content').hide();
+	$('#description').hide();
 	$('#successMessage').show();
     <!-- $('#successMessage').animate( { -->
       <!-- left: '380px', -->
@@ -254,7 +294,7 @@ function handleCardDrop( event, ui ) {
 
 <div style="text-align:center">
   <h1>Ethical Hacking Lesson 2: Card Game</h1>
-  <h2>In this game you are given three sets of cards: <strong>Vulnerabilities, Threats,</strong> and <strong>Harms</strong>. There are <strong>six scenarios</strong> which each have a vulnerability and can cause a specific harm when a specific threat is present. Your goal is to match vulnerabilities, threats, and harms for each of the scenarios. If you match all the cards correctly, you will be able to view the challenge flag.</h2>
+  <h2 id="description">In this game you are given three sets of cards: <strong>Vulnerabilities, Threats,</strong> and <strong>Harms</strong>. There are <strong>six scenarios</strong> which each have a vulnerability and can cause a specific harm when a specific threat is present. Your goal is to match vulnerabilities, threats, and harms for each of the scenarios. If you match all the cards correctly, you will be able to view the challenge flag.</h2>
 </div>
 
   
