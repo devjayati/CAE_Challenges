@@ -8,6 +8,9 @@
 </head>
 
 <body>
+<? 
+session_start();
+?>
 <div id="header">
 	<h2>Social Lesson 5: Spear Phishing</h2>
 	<p>Now you have to decide if the email below is phished or not.</p> 
@@ -47,7 +50,7 @@
 	<div id="results">
 		<p id="display-results"> Show/ Hide </p>
 		<div id="next-button">
-			<form action="email2.php">
+			<form action="email2.php" method="post">
 				<input type="submit" class="button" value="Next" />
 			</form>
 		</div>
