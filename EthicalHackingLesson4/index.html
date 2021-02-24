@@ -4,6 +4,57 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 <!--script src="function.js"></script-->
+<script type="javascript">
+	$(function(){
+  
+  item_height=$(".item").outerHeight(true);
+  height=(item_height+2)*($(".item").length+1);
+  $(".source-container,.destination-container").height(height);
+  
+    
+
+  $(".source .item").draggable({
+    revert:"invalid",
+    start:function(){
+      
+      $(this).data("index",$(this).parent().index());
+      
+    }
+  });
+  
+  $(".destination").droppable({
+      drop:function(evern,ui){
+          if($(this).has(".item").length){
+            if(ui.draggable.parent().hasClass("source")){
+                index=ui.draggable.data("index");
+                ui.draggable.css({left:"0",top:"0"}).appendTo($(".source").eq(index));
+            }
+            else{
+             ui.draggable.css({left:"0",top:"0"}).appendTo($(this));
+              index=ui.draggable.data("index");
+              $(this).find(".item").eq(0).appendTo($(".destination").eq(index))
+            }
+          }
+        else{
+          ui.draggable.css({left:"1px",top:"1px"});
+          ui.draggable.appendTo($(this));
+          $(".destination").removeClass("ui-droppable-active");
+        }
+      }
+  });
+  
+  $(".source").droppable({
+    accept: function(draggable) {
+        return $(this).find("*").length == 0;
+    },
+   drop:function(event,ui){
+     ui.draggable.css({left:"0",top:"0"}).appendTo($(this))
+   }
+  })
+  
+  
+})
+</script>
 <title>Ethical Hacking Lesson 4</title>
 </head>
 
@@ -22,38 +73,37 @@
 		<div class="source-container">
 		 <div class='source'>
 		   <div class='item'>
-			<p>A researcher notices that their boarding pass is generated locally by javascript. He creates a simple boarding pass generator to bring attention to the problem. </p>
+			<p>X<!-- researcher notices that their boarding pass is generated locally by javascript. He creates a simple boarding pass generator to bring attention to the problem.--> </p>
 		   </div>
 		 </div>
 		  
 		  <div class='source'>
 		   <div class='item'>
-			<p>You can read all the information sent from an IoT device that is supposed to alert care-givers of medication use.</p>
+			<p>A<!--You can read all the information sent from an IoT device that is supposed to alert care-givers of medication use.--></p>
 		   </div>
 		 </div>
 		  
 		  <div class='source'>
 		   <div class='item'>
-			<p>You find that if you enter the right string into an order form, instead of logging in, you can access all the user names and passwords</p>
+			<p>B<!--You find that if you enter the right string into an order form, instead of logging in, you can access all the user names and passwords--></p>
 		   </div>
 		 </div>
 		  
 		  <div class='source'>
 		   <div class='item'>
-			<p>If you know a password and add it to the url of a website, it gives you administrative access to the website. You can read personal identifying information, and assign employees to different tasks</p>
+			<p>C<!--If you know a password and add it to the url of a website, it gives you administrative access to the website. You can read personal identifying information, and assign employees to different tasks--></p>
 		   </div>
 		 </div>
 		  
 		  <div class='source'>
 		   <div class='item'>
-			<p> You can take over an e-reader and order books, have them delivered to your own e-reader, and charge them to the person who owns the device. </p>
+			<p> D<!--You can take over an e-reader and order books, have them delivered to your own e-reader, and charge them to the person who owns the device.--> </p>
 		   </div>
 		 </div>
 		  
 		  <div class='source'>
 		   <div class='item'>
-			<p>You find a technology that everyone uses and discover that many of the programs written using that technology make the same programming flaw; that is, if there is an unexpected error then the code that created that error gets the ability to take actions that should not be allowed. 
-</p>
+			<p>E<!--You find a technology that everyone uses and discover that many of the programs written using that technology make the same programming flaw; that is, if there is an unexpected error then the code that created that error gets the ability to take actions that should not be allowed. --></p>
 		   </div>
 		 </div>
 		 

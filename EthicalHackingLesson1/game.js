@@ -219,7 +219,7 @@ document.getElementById("next").onclick = function (){
 				//$("input[name="+name+"]").attr('checked',false);
 				test();
 				}
-				if(document.getElementById("next").innerHTML == "Submit and Get Flag" ) { 
+				if(document.getElementById("next").innerHTML == "Submit" ) { 
 					document.getElementById("main").style.display = "none";
 					document.getElementById("footer").style.display = "none";
 					document.getElementById("nextbutton").style.display = "none";
