@@ -48,7 +48,7 @@ function init() {
   }
    // Create the harm cards
 	var numbers2 = [ 1, 2, 3, 4, 5, 6 ];
-	var terms2 = [ 'Financial Loss', 'Falsified Information', 'Physical Harm', 'Denial of Service', 'Loss of Privacy', 'Device Takeover' ];
+	var terms2 = [ 'Financial Loss', 'False Information', 'Physical Harm', 'Denial of Service', 'Loss of Privacy', 'Device Takeover' ];
 
   for ( var i=0; i<6; i++ ) {
     $('<div>' + terms2[i] + '</div>').data( 'number', numbers2[i] ).attr( 'id', 'card'+numbers2[i] ).appendTo( '#cardSlots' ).draggable( {
@@ -60,7 +60,7 @@ function init() {
   }
   //Create the threat cards
 	var numbers3 = [ 1, 2, 3, 4, 5, 6 ];
-	var terms3 = [ 'Criminal Org.', 'Insider Threat', 'Amateur Hackers', 'Nation State', 'Professional Hacker', 'Social Engineer' ];
+	var terms3 = [ 'Criminal Org.', 'Insider Threat', 'Amateur Hacker', 'Nation State', 'Professional Hacker', 'Social Engineer' ];
 
   for ( var i=0; i<6; i++ ) {
     $('<div>' + terms3[i] + '</div>').data( 'number', numbers3[i] ).attr( 'id', 'card'+numbers3[i] ).appendTo( '#cardThreats' ).draggable( {

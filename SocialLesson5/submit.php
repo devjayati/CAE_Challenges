@@ -34,8 +34,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO sl5 (name, email, age, gender)
-VALUES ('$name', '$email', '$age', '$gender')";
+//$sql = "INSERT INTO sl5 (name, email, age, gender)
+//VALUES ('$name', '$email', '$age', '$gender')";
 
 // input check echo $sql;
 ?>
