@@ -21,10 +21,9 @@
   function test() {
 	var sortedIDs = $( "#sortable" ).sortable( "toArray" );
 	var x=11;
-	//alert(sortedIDs);
 	var xmlhttp = new XMLHttpRequest();
 		xmlhttp.onreadystatechange = function() {
-			document.getElementById("display-results").innerHTML = this.responseText;
+			alert(this.responseText);
     };
     xmlhttp.open("GET", "index.php?q=" + sortedIDs + '&x=' + x, true);
     xmlhttp.send();
@@ -49,7 +48,7 @@
 </ol>
  
  <div id="results">
-		<p id="display-results" style="color:#800000;"> </p>
+		<!--p id="display-results"> Show/ Hide </p-->
 		<button id="next-button" value="check" onclick="test()">Check</button>
 		<button id="next-button" value="reset" onclick="test2()">Reset</button>
 </div>

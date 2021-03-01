@@ -21,18 +21,18 @@
 	
 <?php 
 
-$servername = "db.sice.indiana.edu";
-$username = "phishingsummer19";
-$password = "DK-PS-Nineteen";
-$db = "phishingsummer19";
+//$servername = "db.sice.indiana.edu";
+//$username = "phishingsummer19";
+//$password = "DK-PS-Nineteen";
+//$db = "phishingsummer19";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $db);
+//$conn = new mysqli($servername, $username, $password, $db);
 
 // Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+//if ($conn->connect_error) {
+//  die("Connection failed: " . $conn->connect_error);
+//}
 
 //$sql = "INSERT INTO sl5 (name, email, age, gender)
 //VALUES ('$name', '$email', '$age', '$gender')";
@@ -41,13 +41,13 @@ if ($conn->connect_error) {
 ?>
 
 <?php 
-if ($conn->query($sql) === TRUE) {
-  //echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
+//if ($conn->query($sql) === TRUE) {
+  //echo "New record created successfully";/
+//} else {
+//  echo "Error: " . $sql . "<br>" . $conn->error;
+//}
 
-$conn->close();
+//$conn->close();
 
 ?>
 
