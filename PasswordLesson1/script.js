@@ -6,6 +6,7 @@ let timeUp = false;
 let score = 0;
 let flag = 0;
 var i = 0; 
+var gameIndicator = 0;
 //create a function to make a random time for mole to pop from the hole
 function randomTime(min, max) {
     return Math.round(Math.random() * (max - min) + min);
@@ -74,11 +75,17 @@ function peep() {
 }
 
 function startGame() {
-    scoreBoard.textContent = 0;
-    timeUp = false;
-    score = 0;
-    peep();
-    setTimeout(() => timeUp = true, 15000) //show random moles for 15 seconds
+	if(gameIndicator == 0){
+		scoreBoard.textContent = 0;
+		timeUp = false;
+		score = 0;
+		peep();
+		setTimeout(() => timeUp = true, 15000) //show random moles for 15 seconds
+		gameIndicator = 1;
+	}
+	else{
+		
+	}	
 }
 
 function wack(e){

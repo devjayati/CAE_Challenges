@@ -8,10 +8,10 @@
 $q = $_GET['q'];
 $x = $_GET['x'];
 console.log("q="+q+"and x="+x);
-$servername = "db.sice.indiana.edu";
-$username = "phishingsummer19";
-$password = "DK-PS-Nineteen";
-$db = "phishingsummer19";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db = "CAE";
 $conn = new mysqli($servername, $username, $password, $db);
 
 // Check connection
