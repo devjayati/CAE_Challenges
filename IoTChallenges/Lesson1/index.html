@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="function.js"></script>
+<title>IoT Lesson 1</title>
+</head>
+
+<body>
+<div id="header">
+	<h2>Lesson 1: Intro to IoT </h2>
+	<p>You find that our neighbor has an IP camera. Your task is to find out the IP address and figure out a way to login. Once you are able to login to the camera successfuly, you will find your challenge flag.</p> 
+</div>
+
+<div id="main-content">
+	<div id="scenario">
+		<img id="show" src="house_with_camera.png" alt="House with Camera">
+		<p></p>
+	</div>
+	<div id="options">
+		<input type="hidden" class="scene" id="31"/>
+		<input type="text"></input>
+		<input type="button" class="option" value="Manual" id="option2" onclick="myFunction2()" />
+		<br style="clear: left;" />
+	</div>
+	<div id="results">
+		<p id="display-results"> Show/ Hide </p>
+		<div id="next-button">
+			<form action="index2.html">
+				<input type="submit" class="button" value="Next" />
+			</form>
+		</div>
+	</div>
+</div>
+
+<div id="footer">
+	<p> © 2020. Developed by <a href="http://usablesecurity.net/">HATS Indiana University</a> under the Creative Commons license.</p> 
+</div>
+</body>
+</html>
