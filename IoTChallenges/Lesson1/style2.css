@@ -9,7 +9,7 @@ body {
   border: 2px solid #73AD21;
   padding: 10px;
   width: 80%;
-  height: 100%;
+  height: 1100px;
 }
 #scenario {
 	text-align: center;
@@ -28,6 +28,7 @@ text-align:center;
 #show {
     max-width:100%;
     height:auto;
+	border: 2px solid black;
 }
 #option1 {
 	float: left;
@@ -41,33 +42,39 @@ text-align:center;
 }
 #option2 {
 	position: relative;
-	right: 250px;
-	width: 20%;
-	padding: 5%;
-	text-align: center;
-	background-color: #73AD21;
-	border-radius: 25px;
-	margin: 5px;
-	font-size: 20px;
+	right: 600px;
+	top: 80px;
 }
 
 #wrong {
-	/*padding-left: 45%;*/
+	position: relative;
+	top: 90px;
 	text-align: center;
 	display: none;
-	/*display:none;*/
 }
 #correct {
+	position: relative;
+	top: 90px;
 	text-align: center;
 	display: none;
 }
 #userInput {
 	position: relative;
-	right: 250px;
+	right: 200px;
+}	
+#userInput2 {
+	position: relative;
+	right: 470px;
+	top: 40px;
 }	
 #label {
 	position: relative;
-	right: 250px;
+	right: 200px;
+}	
+#label2 {
+	position: relative;
+	right: 470px;
+	top: 40px;
 }	
 .button {
   /*background-color: #4CAF50;*/
