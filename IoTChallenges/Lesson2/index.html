@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript">
+        function show(){ 
+        document.getElementById('results').style.display = "block";
+		document.getElementById('header').style.display = "none";
+		document.getElementById('scenario').style.display = "none";
+        }
+</script>
+
+<title>IoT Lesson 2</title>
+</head>
+
+<body>
+<div id="header" style="display:block;">
+	<h2>Lesson 2: Horizontal Access & Authorization</h2>
+	<p>After gaining control over the camera in Lesson 1, you can see the following dimly lit picture in which you see a Ring Alarm Hub:</p> 
+	<img id="ring" src="ring-alarm.jpg" alt="Ring Alarm Hub">
+</div>
+
+<div id="main-content">
+	<div id="scenario" style="display:block;">
+		<p> The lights are out in the room, and you wish you could see more, but seeing the Ring alarm reminds you that months back you helped your neighbor setup that through a Memo smartplug using your phone. You know your friend is serious about security and has reset his network password since then, you do wonder if your access to the alarm is still possible. It's worth a try! </p>
+		<img id="show" src="dim-li-room.jpg" alt="Dimly Lit Room">
+		<p></p>
+	</div><hr>
+	<div id="options">
+		<input type="button" class="option" value="Check the Memo App on Your Phone" id="option2" onclick="show()" />
+	</div><hr>
+	<div id="results"  style="display:none;">
+		<img id="memo" src="wemo.png" alt="memo smart plug">
+		<p id="display-results">Which of these would be useful to switch on?</p>
+		  <input type="radio" id="up" name="devices">
+		  <label for="up">Upstairs Lights</label><br>
+		  <input type="radio" id="down" name="devices">
+		  <label for="down">Downstairs Lights</label><br>
+		  <input type="radio" id="attic" name="devices">
+		  <label for="attic">Attic Lights</label><br>
+		  <input type="radio" id="therm" name="devices">
+		  <label for="therm">Thermostat</label><br>
+		  <input type="radio" id="ring" name="devices">
+		  <label for="ring">Ring Alarm</label>
+		<div id="next-button">
+			<form action="index2.html">
+				<input type="submit" class="button" value="Check" />
+			</form>
+		</div>
+	</div>
+</div>
+
+<div id="footer">
+	<p> © 2020. Developed by <a href="http://usablesecurity.net/">HATS Indiana University</a> under the Creative Commons license.</p> 
+</div>
+</body>
+</html>
