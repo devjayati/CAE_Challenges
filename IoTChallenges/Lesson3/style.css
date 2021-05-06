@@ -1,0 +1,136 @@
+body {
+    background-color: white;
+    font-family: Alegreya Sans, Verdana;
+	color: black;
+	width:90%
+}
+#main-content {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 10px;
+  width: 80%;
+  height: 100%;
+}
+#scenario {
+	text-align: center;
+}
+#footer {
+	font-size: 12px;
+}
+img {
+	border: 0px solid #000000;
+}
+#credentials {
+width: 100%;
+margin-left: 25%;
+text-align:center;
+}
+#IP {
+width: 100%;
+margin-left: 25%;
+text-align:center;
+display:none;
+}
+#show {
+    max-width:100%;
+    height:auto;
+}
+#option2 {
+	position: relative;
+	right: 400px;
+	background-color: #73AD21;
+	padding: 3%;
+	text-align: center;
+	border-radius: 25px;
+	margin: 5px;
+	font-size: 20px;
+}
+#option3 {
+	position: relative;
+	right: 200px;
+	background-color: #73AD21;
+	padding: 3%;
+	text-align: center;
+	border-radius: 25px;
+	margin: 5px;
+	font-size: 20px;
+}
+#option4 {
+	position: relative;
+	left: 100px;
+	background-color: #73AD21;
+	padding: 3%;
+	text-align: center;
+	border-radius: 25px;
+	margin: 5px;
+	font-size: 20px;
+}
+
+#wrong {
+	/*padding-left: 45%;*/
+	text-align: center;
+	display: none;
+	/*display:none;*/
+}
+#correct {
+	text-align: center;
+	display: none;
+}
+#username {
+	position: relative;
+	right: 180px;
+	bottom: 25px;
+}	
+#password {
+	position: relative;
+	right: 450px;
+	top: 25px;
+}	
+#ip {
+	position: relative;
+	right: 200px;
+}	
+#ip2 {
+	position: relative;
+	left: 100px;
+}	
+#label1 {
+	position: relative;
+	right: 180px;
+	bottom: 25px;
+}	
+#label2 {
+	position: relative;
+	right: 450px;
+	top: 25px;
+}
+#label3 {
+	position: relative;
+	right: 200px;
+}	
+#label4 {
+	position: relative;
+	left: 100px;
+}
+#results {
+	/*padding-left: 45%;*/
+	position: relative;
+	bottom: 70px;
+	text-align: center;
+	display: none;
+	/*display:none;*/
+}
+.button {
+  /*background-color: #4CAF50;*/
+  background-color: #0f52ba;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
