@@ -5,29 +5,27 @@
 <meta http-equiv="refresh" content="ind = true; URL=http://usablesecurity.net/" id="newPage" style="display:none"/>
 <link rel="stylesheet" type="text/css" href="style.css" />
 <script src="function.js"></script>
-<title>IoT Lesson 1</title>
+<title>IoT Lesson 4</title>
 </head>
 
 <body>
+
 <div id="header">
-	<h2>Lesson 1: Introduction to the IoT </h2>
-	<p>You find that our neighbor has an IP camera. Your task is to find out the IP address and figure out a way to login. Once you are able to login to the camera successfully, you will find your challenge flag.</p> 
+	<h2>Lesson 4: Breaching the Forgotten </h2>
+	<p>Now that you have found the correct IP address, enter it in the search bar below to take control of the printer.</p>
 </div>
 
 <div id="main-content">
-	<div id="scenario">
-		<img id="show" src="house_with_camera.png" alt="House with Camera">
-		<p></p>
+	<div id="picture">
+		<img id="show" src="printer.jpg" width="600" height="400" alt="printer">
 	</div>
-	<div id="options">
-		<input type="hidden" class="scene1" id="31"/>
-		<label for="userInput" id="label">Enter the IP Address:</label>
-		<input type="text" id="userInput"></input>
-		<input type="button" class="option" value="Manual" id="option2" onclick="myFunction()" />
+	<div id="search">
+		<input type="text" id="search_bar"></input>
+		<input type="button" class="option" value="Search" id="search_button" onclick="myFunction()" />
 		<br style="clear: left;" />
 	</div>
 	<div id="wrong">
-		<p>That is not the correct IP address.  Please try again.</p>
+		<p>That is not correct.  Please try again.</p>
 	</div>
 	<div id="correct">
 		<p>Correct!</p>
@@ -39,12 +37,12 @@
 	<p> © 2020. Developed by <a href="http://usablesecurity.net/">HATS Indiana University</a> under the Creative Commons license.</p> 
 </div>
 
-
 <script>
 	function myFunction(){
-	var ip = userInput.value;
-		if(ip == "192.168.0.100"){
+		var value = search_bar.value;
+		if(value == "172.20.10.12"){
 			wrong.style = "display:none";
+			search.style = "display:none";
 			correct.style = "display:block";
 		}
 		else{
@@ -54,6 +52,6 @@
 	}
 </script>
 
-
 </body>
+
 </html>
