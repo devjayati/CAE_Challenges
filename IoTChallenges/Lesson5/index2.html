@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="refresh" content="ind = true; URL=http://usablesecurity.net/" id="newPage" style="display:none"/>
+<link rel="stylesheet" type="text/css" href="style2.css" />
+<script src="function.js"></script>
+<title>IoT Lesson 5</title>
+</head>
+
+<body>
+
+	<div id="header">
+		<h2>Lesson 5: Interaction and Air Gap Attacks </h2>
+		<p>Now that you have logged into the speaker, use its text-to-speech feature to get Alexa's attention.</p>
+	</div>
+	
+	<div id="indicator" class="container">
+		<img id="alexa" src="alexa.jpg" width="900" height="600">
+		<div id="hide" class="centered">
+			<img id="bubble" src="bubble.png" width="350" height="250">
+			<div id="user_text" class="centered">
+				<textarea id="tb2" cols="28" rows="4"></textarea>
+			</div>
+		</div>
+	</div>
+
+	<div id="main-content">
+
+		<div id="url">
+			<p>172.20.10.14</p>
+		</div>
+		
+		<br>
+		
+		<div id="buttons">
+			<input type="button" id="music_button" value="Play Music" onclick="music()"/>
+			<input type="button" id="settings_button" value="Settings" onclick="settings()"/>
+			<input type="button" id="text_button" value="Text-To-Speech" onclick="text()"/>
+		</div>
+		
+		<br>
+		
+		<div id="music">
+			<div id="music_content">
+				<div id="music_title">
+					<h3>Play Music</h3>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="column" id="favorites">
+						<h2 class="header">Favorites</h2>
+						<p>Favorite 1</p>
+						<p>Favorite 2</p>
+						<p>Favorite 3</p>
+						<p>Favorite 4</p>
+						<p>Favorite 5</p>
+					</div>
+					<div class="column" id="playlists">
+						<h2 class="header">Playlists</h2>
+						<p>Playlist 1</p>
+						<p>Playlist 2</p>
+						<p>Playlist 3</p>
+						<p>Playlist 4</p>
+						<p>Playlist 5</p>
+					</div>
+					<div class="column" id="artists">
+						<h2 class="header">Artists</h2>
+						<p>Artist 1</p>
+						<p>Artist 2</p>
+						<p>Artist 3</p>
+						<p>Artist 4</p>
+						<p>Artist 5</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="settings">
+			<div id="settings_content">
+				<div id="setting_title">
+					<h3>Settings</h3>
+				</div>
+				<hr>
+				<h3>Setup</h3>
+				<h3>Help</h3>
+				<h3>Preferences</h3>
+				<h3>Tools</h3>
+				<h3>Power Management</h3>
+				<h3>Network</h3>
+				<h3>Bluetooth</h3>
+			</div>
+		</div>
+		
+		<div id="text">
+			<div id="text_content">
+				<div id="text_title">
+					<h3>Text-To-Speech</h3>
+				</div>
+				<hr>
+				<p>Make the speaker say what you want by typing in the box below and clicking the "Speak" button.</p>
+				<textarea id="tb1" cols="75" rows="10"></textarea>
+				<div id="speak">
+					<input type="button" id="speak_button" value="Speak" onclick="speak()"/>
+				</div>
+			</div>
+		</div>
+		
+		<div id="wrong">
+			<p>That is not correct.  Please try again.</p>
+		</div>
+	
+		<div id="correct">
+			<p>Correct!</p>
+		</div>
+
+	</div>
+	
+	<script>
+	
+		function music(){
+			music_button.style = "background-color: blue; color:white;";
+			settings_button.style = "background-color: white; color:black;";
+			text_button.style = "background-color: light-gray; color:black;";
+			music_content.style = "display:block;";
+			settings_content.style = "display:none;";
+			text_content.style = "display:none;";
+		}
+		
+		function settings(){
+			music_button.style = "background-color: white; color:black;";
+			settings_button.style = "background-color: blue; color:white;";
+			text_button.style = "background-color: white; color:black;";
+			music_content.style = "display:none;";
+			settings_content.style = "display:block;";
+			text_content.style = "display:none;";
+		}
+		
+		function text(){
+			music_button.style = "background-color: white; color:black;";
+			settings_button.style = "background-color: white; color:black;";
+			text_button.style = "background-color: blue; color:white;";
+			music_content.style = "display:none;";
+			settings_content.style = "display:none;";
+			text_content.style = "display:block;";
+		}
+		
+		function speak(){
+			hide.style = "display:block;";
+			tb2.value = tb1.value;
+			if(tb1.value == "Alexa" || tb1.value == "alexa"){
+				alexa.src = "alexa2.jpg";
+				correct.style = "display:block;";
+				wrong.style = "display:none;";
+			}
+			else{
+				alexa.src = "alexa.jpg";
+				correct.style = "display:none;";
+				wrong.style = "display:block;";
+			}
+		}
+	
+	</script>
+
+</body>
+
+</html>

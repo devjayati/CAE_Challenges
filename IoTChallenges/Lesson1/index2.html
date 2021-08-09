@@ -11,7 +11,7 @@
 <body>
 <div id="header">
 	<h2>Lesson 1: Introduction to the IoT </h2>
-	<p>You have gained access to the camera through it IP address.  Now enter the credentials found in the camera's manual to log in.</p> 
+	<p>You have gained access to the camera through its IP address.  Now enter the credentials found in the camera's manual to log in.</p> 
 </div>
 
 <div id="main-content">
@@ -21,11 +21,17 @@
 	</div>
 	<div id="options">
 		<input type="hidden" class="scene" id="200"/>
-		<label for="userInput" id="label">Username:</label>
-		<input type="text" id="userInput"></input>
-		<label for="userInput2" id="label2">Password:</label>
-		<input type="password" id="userInput2"></input>
-		<input type="button" class="option" value="Login" id="option2" onclick="myFunction()" />
+	</div>
+	<div id="username">
+		<label for="user_input" id="user_label">Username:</label>
+		<input type="text" id="user_input"></input>
+	</div>
+	<div id="password">
+		<label for="pass_input" id="pass_label">Password:</label>
+		<input type="password" id="pass_input"></input>
+	</div>
+	<div id="login">
+		<input type="button" class="option" value="Login" id="login_button" onclick="myFunction()" />
 		<br style="clear: left;" />
 	</div>
 	<div id="results">
@@ -51,7 +57,7 @@
 		var results = document.getElementById("results");
 		results.style.display = "block";
 		var x = document.getElementsByClassName("scene")[0].id;
-		var answer = userInput.value+userInput2.value;
+		var answer = user_input.value+pass_input.value;
 		var xmlhttp = new XMLHttpRequest();
 			xmlhttp.onreadystatechange = function() {
 				document.getElementById("display-results").innerHTML = this.responseText;

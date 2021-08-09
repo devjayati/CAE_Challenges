@@ -5,11 +5,14 @@ body {
 	width:90%
 }
 #main-content {
-  border-radius: 25px;
-  border: 2px solid #73AD21;
-  padding: 10px;
-  width: 80%;
-  height: 100%;
+	border-radius: 25px;
+	border: 2px solid #73AD21;
+	padding: 10px;
+	width: 80%;
+	height: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 #scenario {
 	text-align: center;

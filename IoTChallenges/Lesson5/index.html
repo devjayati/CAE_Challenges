@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="refresh" content="ind = true; URL=http://usablesecurity.net/" id="newPage" style="display:none"/>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="function.js"></script>
+<title>IoT Lesson 5</title>
+</head>
+
+<body>
+
+<div id="header">
+	<h2>Lesson 5: Interaction and Air Gap Attacks </h2>
+	<p>Now that you have discovered the speaker instructions, use the information you found to sign into the speaker.</p>
+</div>
+
+<div id="main-content">
+
+	<div id="picture">
+		<img id="show" src="speaker.jpg">
+	</div>
+	
+	<br>
+	<br>
+	
+	<div id="ip">
+		<label for="ip_input" id="ip_label">IP Address:</label>
+		<input type="text" id="ip_input"></input>
+	</div>
+	
+	<br>
+	
+	<div id="username">
+		<label for="user_input" id="user_label">Username:</label>
+		<input type="text" id="user_input"></input>
+	</div>
+	
+	<br>
+	
+	<div id="password">
+		<label for="pass_input" id="pass_label">Password:</label>
+		<input type="password" id="pass_input"></input>
+	</div>
+	
+	<br>
+	
+	<div id="login">
+		<input type="button" class="option" value="Login" id="login_button" onclick="myFunction()" />
+	</div>
+	
+	<div id="wrong">
+		<p>That is not correct.  Please try again.</p>
+	</div>
+	
+	<div id="correct">
+		<p>Correct!</p>
+		<p><a href="index2.html">Click Here</a></p>
+	</div>
+
+</div>
+
+<div id="footer">
+	<p> © 2020. Developed by <a href="http://usablesecurity.net/">HATS Indiana University</a> under the Creative Commons license.</p> 
+</div>
+
+<script>
+	function myFunction(){
+		var ip_value = ip_input.value;
+		var user_value = user_input.value;
+		var pass_value = pass_input.value;
+		if(ip_value == "172.20.10.14" && user_value == "username" && pass_value == "1234"){
+			wrong.style = "display:none";
+			correct.style = "display:block";
+		}
+		else{
+			correct.style = "display:none";
+			wrong.style = "display:block";
+		}
+	}
+</script>
+
+</body>
+
+</html>

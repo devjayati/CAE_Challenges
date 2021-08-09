@@ -1,0 +1,115 @@
+body {
+    background-color: white;
+    font-family: Alegreya Sans, Verdana;
+	color: black;
+	width:90%
+}
+.column {
+	float: left;
+	width: 33.33%;
+}
+.column2 {
+	float: left;
+	width: 40%;
+}
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.header {
+	color: white;
+	background-color: gray;
+	width: 75%;
+}
+#url {
+	text-align: center;
+	border: 1px solid black;
+}
+#main-content {
+	border-radius: 25px;
+	border: 2px solid #73AD21;
+	padding: 10px;
+	width: 80%;
+	height: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#music_button {
+	color: white;
+	background-color: blue;
+	padding: 2%;
+	border-radius: 10px;
+}
+#settings_button {
+	background-color: white;
+	padding: 2%;
+	border-radius: 10px;
+}
+#text_button {
+	background-color: white;
+	padding: 2%;
+	border-radius: 10px;
+}
+#settings_content {
+	display: none;
+}
+#text_content {
+	display: none;
+}
+#footer {
+	font-size: 12px;
+}
+#username {
+	text-align: center;
+}
+#password {
+	text-align: center;
+}
+#login {
+	text-align: center;
+}
+#login_button {
+	background-color: #73AD21;
+	padding: 2%;
+	text-align: center;
+	border-radius: 25px;
+	margin: 5px;
+	font-size: 20px;
+}
+#wrong {
+	text-align: center;
+	display: none;
+}
+#correct {
+	text-align: center;
+	display: none;
+}
+#tb2 {
+	width: 175px;
+	height: 100px;
+	font-size: 40px;
+	border: none;
+}
+#hide {
+	display: none;
+}
+#speak_button {
+	background-color: #73AD21;
+	padding: 2%;
+	text-align: center;
+	border-radius: 25px;
+	margin: 5px;
+	font-size: 20px;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container {
+  position: relative;
+  text-align: center;
+}
