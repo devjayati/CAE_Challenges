@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="refresh" content="ind = true; URL=http://usablesecurity.net/" id="newPage" style="display:none"/>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="function.js"></script>
+<title>IoT Lesson 3</title>
+</head>
+
+<body>
+<div id="header">
+	<h2>Lesson 3: Networking 101 </h2>
+	<p>Now that you've accessed the router, you can see the network map. Enter the IP address of an overlooked item that might not be protected very well. Remember to take note of the IP address for later lessons.</p> 
+</div>
+
+<div id="main-content">
+	<div id="scenario">
+		<img id="show" src="network_map.jpg" alt="House with Camera">
+		<p></p>
+	</div>
+	<div id="IP2">
+	<input type="hidden" class="scene" id="210"/>
+		<label for="ip2" id="label4">Enter the appropriate IP address:</label>
+		<input type="text" id="ip2"></input>
+		<input type="button" class="option" value="Login" id="option4" onclick="myFunction3()" />
+		<br style="clear: left;" />
+	</div>
+	<div id="results">
+		<p id="display-results" style="position:relative;top:80px;"> Show/ Hide </p>
+	</div>
+</div>
+
+<div id="footer">
+	<p> © 2020. Developed by <a href="http://usablesecurity.net/">HATS Indiana University</a> under the Creative Commons license.</p> 
+</div>
+
+
+<script>
+	function myFunction3(){
+		var results = document.getElementById("results");
+		results.style.display = "block";
+		var x = document.getElementsByClassName("scene")[0].id;
+		var answer = ip2.value;
+		var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function() {
+				document.getElementById("display-results").innerHTML = this.responseText;
+		};
+		xmlhttp.open("GET", "index.php?q=" + answer + '&x=' + x, true);
+		xmlhttp.send();
+	}
+</script>
+
+
+</body>
+</html>

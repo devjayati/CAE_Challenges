@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="refresh" content="ind = true; URL=http://usablesecurity.net/" id="newPage" style="display:none"/>
+<link rel="stylesheet" type="text/css" href="style2.css" />
+<script src="function.js"></script>
+<title>IoT Lesson 4</title>
+</head>
+
+<body>
+	<div id="header">
+	<h2>Lesson 4: Breaching the Forgotten </h2>
+	<p>Now that you have control over the printer, see if you can find any useful information left in it. Once you believe you have found this information, click the "check" button at the bottom of the screen.</p>
+	</div>
+	<div id="main-content">
+		<div id="url">
+			<p>172.20.10.12</p>
+		</div>
+		<br>
+		<div id="buttons">
+			<input type="button" id="home_button" value="Home" onclick="home()"/>
+			<input type="button" id="settings_button" value="Settings" onclick="settings()"/>
+			<input type="button" id="information_button" value="Information" onclick="information()"/>
+		</div>
+		<br>
+		<div id="home">
+			<div id="home_content">
+				<div id="welcome">
+					<h3>Welcome to Embedded Web Server</h3>
+				</div>
+				<hr>
+				<div id="summary">
+					<p>The embedded Web server (EWS) is a web tool that allows you to view product status information, change settings, and manage device from your computer using a Web browser.</p>
+					<p>For more information, see the electronic User Guide available on your computer after you install the software. (The user guide is also available online at www.hp.com/support)</p>
+				</div>
+				<div class="row">
+					<div class="column" id="status">
+						<h2 class="header">Status</h2>
+						<img id="printer_pic" src="printer2.jpg" width="300" height="200">
+						<p>Status: Ready</p>
+						<h3>Estimated Ink Levels:</h3>
+						<p>Cyan: 27%</p>
+						<p>Magenta: 50%</p>
+						<p>Yellow: 42%</p>
+						<p>Black: 28%</p>
+					</div>
+					<div class="column" id="setup">
+						<h2 class="header">Setup</h2>
+						<p>Set up common features of your device.</p>
+						<h3>Digital Filing:</h3>
+						<p>- Scan to Network Folder Setup</p>
+						<p>- Scan to E-mail Setup</p>
+						<p>- Digital Fax Setup</p>
+						<h3>Connectivity:</h3>
+						<p>- Network Settings</p>
+						<p>- Wireless (802.11) Setup Wizard
+						<p>- Bluetooth Settings</p>
+					</div>
+					<div class="column" id="manage">
+						<h2 class="header">Manage</h2>
+						<p>Manage settings for common features of your device.</p>
+						<h3>Security:</h3>
+						<p>- Admin Password Setup</p>
+						<h3>Contacts:</h3>
+						<p>- Fax Speed-dial</p>
+						<p>- E-mail Address Book</p>
+						<h3>Reports:</h3>
+						<p>- Usage Tracking</p>
+						<p>- Fax Log</p>
+						<p>- Alerts</p>
+						<h3>Maintenance:</h3>
+						<p>- Diagnostic Tools</p>
+						<p>- Backup and Restore Settings</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="settings">
+			<div id="settings_content">
+				<h3>Setup</h3>
+				<h3>Help</h3>
+				<h3>Preferences</h3>
+				<h3>Tools</h3>
+				<h3>Power Management</h3>
+				<h3>Network</h3>
+				<h3>Bluetooth</h3>
+			</div>
+		</div>
+		<div id="information">
+			<div id="information_content">
+				<div class="row">
+					<div class="column2" id="info_options">
+						<h3>Overview</h3>
+						<input type="button" value="Device Information" onclick="undo_webscan()"/>
+						<br>
+						<br>
+						<input type="button" value="Network Information" onclick="undo_webscan()"/>
+						<h3>Status</h3>
+						<input type="button" value="Ink Supplies" onclick="undo_webscan()"/>
+						<br>
+						<br>
+						<input type="button" value="Usage Report" onclick="undo_webscan()"/>
+						<br>
+						<br>
+						<input type="button" value="Log" onclick="undo_webscan()"/>
+						<h3>Applications</h3>
+						<input type="button" value="Webscan" onclick="webscan()"/>
+						<h3>EWS Settings</h3>
+						<input type="button" value="Language" onclick="undo_webscan()"/>
+						<br>
+						<br>
+						<input type="button" value="Refresh Rate" onclick="undo_webscan()"/>
+					</div>
+					<div class="column2" id="webscan_info">
+						<div>
+							<h2>Webscan</h2>
+							<p>Webscan lets you scan photos and documents from your device to your computer using a Web browser, even if you choose not to install the device software on your computer.</p>
+						</div>
+						<br>
+						<br>
+						<div id="scan_document">
+							<input type="button" value="Scan Document" id="scan_button" onclick="scan_document()"/>
+						</div>
+					</div>
+					<div class="column2" id="speaker_instructions">
+						<img id="instructions" src="instructions.jpg" width="510" height="660">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="wrong">
+		<p>You have not found any useful information yet. Keep searching.</p>
+	</div>
+	<div id="correct">
+		<p>Correct!</p>
+		<p>You can use the speaker instructions to talk to Alexa and open the front door! Don't forget to take note of the speaker's IP address, username, and password for the next lesson.</p>
+	</div>
+	<div id="check">
+		<input type="button" id="check_button" value="Check" onclick="check()"/>
+	</div>
+	<div id="footer">
+		<p> © 2020. Developed by <a href="http://usablesecurity.net/">HATS Indiana University</a> under the Creative Commons license.</p> 
+	</div>
+	
+	<script>
+	
+		var result = false;
+	
+		function home(){
+			home_button.style = "background-color: blue; color:white;";
+			settings_button.style = "background-color: white; color:black;";
+			information_button.style = "background-color: light-gray; color:black;";
+			home_content.style = "display:block;";
+			settings_content.style = "display:none;";
+			information_content.style = "display:none;";
+		}
+		
+		function settings(){
+			home_button.style = "background-color: white; color:black;";
+			settings_button.style = "background-color: blue; color:white;";
+			information_button.style = "background-color: white; color:black;";
+			home_content.style = "display:none;";
+			settings_content.style = "display:block;";
+			information_content.style = "display:none;";
+		}
+		
+		function information(){
+			home_button.style = "background-color: white; color:black;";
+			settings_button.style = "background-color: white; color:black;";
+			information_button.style = "background-color: blue; color:white;";
+			home_content.style = "display:none;";
+			settings_content.style = "display:none;";
+			information_content.style = "display:block;";
+		}
+		
+		function webscan(){
+			webscan_info.style = "display:block;";
+		}
+		
+		function undo_webscan(){
+			webscan_info.style = "display:none;";
+		}
+		
+		function scan_document(){
+			webscan_info.style = "display:none;";
+			speaker_instructions.style = "display:block;";
+			result = true;
+		}
+		
+		function check(){
+			if(result){
+				correct.style = "display:block;";
+				wrong.style = "display:none;";
+			}
+			else{
+				correct.style = "display:none;";
+				wrong.style = "display:block;";
+			}
+		}
+	</script>
+</body>
+
+</html>

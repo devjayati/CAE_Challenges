@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="refresh" content="ind = true; URL=http://usablesecurity.net/" id="newPage" style="display:none"/>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="function.js"></script>
+<title>IoT Lesson 3</title>
+</head>
+
+<body>
+<div id="header">
+	<h2>Lesson 3: Networking 101 </h2>
+	<p>You turned the lights on downstairs and you can now see the username and password to the router.  Once logged into the router, enter the IP address 172.20.10.1 to access the network map.</p> 
+</div>
+
+<div id="main-content">
+	<div id="scenario">
+		<img id="show" src="lit_room.jpg" width="1200" height="1200" alt="House with Camera">
+		<p></p>
+	</div>
+	<div id="credentials">
+		<label for="username" id="label1">Username:</label>
+		<input type="text" id="username"></input>
+		<label for="password" id="label2">Password:</label>
+		<input type="password" id="password"></input>
+		<input type="button" class="option" value="Login" id="option2" onclick="myFunction()" />
+		<br style="clear: left;" />
+	</div>
+	<div id="IP">
+		<label for="ip" id="label3">Enter the IP address to the router:</label>
+		<input type="text" id="ip"></input>
+		<input type="button" class="option" value="Login" id="option3" onclick="myFunction2()" />
+		<br style="clear: left;" />
+	</div>
+	<div id="wrong">
+		<p>That is not correct.  Please try again.</p>
+	</div>
+	<div id="correct">
+		<p>Correct!</p>
+		<p><a href="index2.html">Click Here</a></p>
+	</div>
+</div>
+
+<div id="footer">
+	<p> © 2020. Developed by <a href="http://usablesecurity.net/">HATS Indiana University</a> under the Creative Commons license.</p> 
+</div>
+
+
+<script>
+	function myFunction(){
+	var u = username.value;
+	var p = password.value;
+	
+		if(u == "admin" && p == "meow123"){
+			wrong.style = "display:none";
+			credentials.style = "display:none";
+			IP.style = "display:block";
+		}
+		else{
+			correct.style = "display:none";
+			wrong.style = "display:block";
+		}
+	}
+	function myFunction2(){
+		var input = ip.value;
+		
+		if(input == "172.20.10.1"){
+			correct.style = "display:block";
+			wrong.style = "display:none";
+		}
+		else{
+			correct.style = "display:none";
+			wrong.style = "display:block";
+		}
+	}
+</script>
+
+
+</body>
+</html>

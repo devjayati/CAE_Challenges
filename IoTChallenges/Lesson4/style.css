@@ -14,43 +14,28 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
-#scenario {
+#picture {
 	text-align: center;
 }
 #footer {
 	font-size: 12px;
 }
-img {
-	border: 0px solid #000000;
-}
-#options {
-width: 100%;
-margin-left: 25%;
-text-align:center;
-}
-#show {
-    max-width:100%;
-    height:auto;
-	border: 2px solid black;
-}
-#results {
-	text-align: center;
-	display: none;
-}
-#username {
+#search {
 	text-align: center;
 }
-#password {
-	text-align: center;
-}
-#login {
-	text-align: center;
-}
-#login_button {
+#search_button {
 	background-color: #73AD21;
 	padding: 2%;
 	text-align: center;
 	border-radius: 25px;
 	margin: 5px;
 	font-size: 20px;
+}
+#wrong {
+	text-align: center;
+	display: none;
+}
+#correct {
+	text-align: center;
+	display: none;
 }

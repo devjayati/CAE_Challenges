@@ -4,19 +4,6 @@ body {
 	color: black;
 	width:90%
 }
-* {box-sizing: border-box;}
-
-.img-magnifier-container {
-  position: relative;
-}
-.img-magnifier-glass {
-  position: absolute;
-  border: 3px solid #000;
-  border-radius: 50%;
-  cursor: none;
-  width: 100px;
-  height: 100px;
-}
 #main-content {
 	border-radius: 25px;
 	border: 2px solid #73AD21;
@@ -36,32 +23,50 @@ body {
 img {
 	border: 0px solid #000000;
 }
-#options {
+#credentials {
 width: 100%;
 margin-left: 25%;
 text-align:center;
+}
+#IP {
+width: 100%;
+margin-left: 25%;
+text-align:center;
+display:none;
+}
+#210{
+	text-align:center;
 }
 #show {
     max-width:100%;
     height:auto;
 }
-#option1 {
-	float: left;
-	width: 25%;
-	padding: 5%;
-	text-align: center;
-	background-color: #ffa500;
-	border-radius: 25px;
-	margin: 10px;
-	font-size: 20px;
-}
 #option2 {
 	position: relative;
-	right: 250px;
-	width: 20%;
-	padding: 5%;
-	text-align: center;
+	right: 400px;
 	background-color: #73AD21;
+	padding: 3%;
+	text-align: center;
+	border-radius: 25px;
+	margin: 5px;
+	font-size: 20px;
+}
+#option3 {
+	position: relative;
+	right: 200px;
+	background-color: #73AD21;
+	padding: 3%;
+	text-align: center;
+	border-radius: 25px;
+	margin: 5px;
+	font-size: 20px;
+}
+#option4 {
+	position: relative;
+	left: 100px;
+	background-color: #73AD21;
+	padding: 3%;
+	text-align: center;
 	border-radius: 25px;
 	margin: 5px;
 	font-size: 20px;
@@ -77,14 +82,50 @@ text-align:center;
 	text-align: center;
 	display: none;
 }
-#userInput {
+#username {
 	position: relative;
-	right: 250px;
+	right: 180px;
+	bottom: 25px;
 }	
-#label {
+#password {
 	position: relative;
-	right: 250px;
+	right: 450px;
+	top: 25px;
 }	
+#ip {
+	position: relative;
+	right: 200px;
+}	
+#ip2 {
+	position: relative;
+	left: 100px;
+}	
+#label1 {
+	position: relative;
+	right: 180px;
+	bottom: 25px;
+}	
+#label2 {
+	position: relative;
+	right: 450px;
+	top: 25px;
+}
+#label3 {
+	position: relative;
+	right: 200px;
+}	
+#label4 {
+	position: relative;
+	left: 100px;
+}
+#results {
+	/*padding-left: 45%;*/
+	position: relative;
+	bottom: 70px;
+	text-align: center;
+	display: none;
+	/*display:none;*/
+}
 .button {
   /*background-color: #4CAF50;*/
   background-color: #0f52ba;
@@ -98,14 +139,4 @@ text-align:center;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-}
-#camera{
-	position: absolute;
-}
-#camera:hover {
-	transform: scale(2);
-}
-.container {
-  position: relative;
-  text-align: center;
 }

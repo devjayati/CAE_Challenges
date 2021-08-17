@@ -9,50 +9,118 @@
 </head>
 
 <body>
-<div id="header">
-	<h2>Lesson 1: Intro to IoT </h2>
-	<p>You find that our neighbor has an IP camera. Your task is to find out the IP address and figure out a way to login. Once you are able to login to the camera successfuly, you will find your challenge flag.</p> 
-</div>
 
-<div id="main-content">
-	<div id="scenario">
-		<img id="show" src="house_with_camera.png" alt="House with Camera">
-		<p></p>
+	<div id="header">
+		<h2>Lesson 1: Introduction to the IoT </h2>
+		<p>You find that our neighbor has an IP camera. Your task is to find out the IP address and figure out a way to login. Once you are able to login to the camera successfully, you will find your challenge flag.</p> 
 	</div>
-	<div id="options">
-		<input type="hidden" class="scene1" id="31"/>
-		<label for="userInput" id="label">Enter the IP Address:</label>
-		<input type="text" id="userInput"></input>
-		<input type="button" class="option" value="Manual" id="option2" onclick="myFunction()" />
-		<br style="clear: left;" />
-	</div>
-	<div id="wrong">
-		<p>That is not the correct IP address.  Please try again.</p>
-	</div>
-	<div id="correct">
-		<p>Correct!</p>
-		<p><a href="index2.html">Click Here</a></p>
-	</div>
-</div>
 
-<div id="footer">
-	<p> © 2020. Developed by <a href="http://usablesecurity.net/">HATS Indiana University</a> under the Creative Commons license.</p> 
-</div>
+	<div id="scenario" class="img-magnifier-container">
+		<img src="house_with_camera.jpg" id="show">
+	</div>
+
+	<div id="main-content">
+		<div id="options">
+			<input type="hidden" class="scene1" id="31"/>
+			<label for="userInput" id="label">Enter the IP Address:</label>
+			<input type="text" id="userInput"></input>
+			<input type="button" class="option" value="Manual" id="option2" onclick="myFunction()" />
+			<br style="clear: left;" />
+		</div>
+		<div id="wrong">
+			<p>That is not the correct IP address.  Please try again.</p>
+		</div>
+		<div id="correct">
+			<p>Correct!</p>
+			<p><a href="index2.html">Click Here</a></p>
+		</div>
+	</div>
+
+	<div id="footer">
+		<p> © 2020. Developed by <a href="http://usablesecurity.net/">HATS Indiana University</a> under the Creative Commons license.</p> 
+	</div>
 
 
-<script>
-	function myFunction(){
-	var ip = userInput.value;
-		if(ip == "192.168.0.100"){
-			wrong.style = "display:none";
-			correct.style = "display:block";
+	<script>
+		function myFunction(){
+		var ip = userInput.value;
+			if(ip == "192.168.0.100"){
+				wrong.style = "display:none";
+				correct.style = "display:block";
+			}
+			else{
+				correct.style = "display:none";
+				wrong.style = "display:block";
+			}
 		}
-		else{
-			correct.style = "display:none";
-			wrong.style = "display:block";
+		
+		function magnify(imgID, zoom) {
+		  var img, glass, w, h, bw;
+		  img = document.getElementById(imgID);
+
+		  /* Create magnifier glass: */
+		  glass = document.createElement("DIV");
+		  glass.setAttribute("class", "img-magnifier-glass");
+
+		  /* Insert magnifier glass: */
+		  img.parentElement.insertBefore(glass, img);
+
+		  /* Set background properties for the magnifier glass: */
+		  glass.style.backgroundImage = "url('" + img.src + "')";
+		  glass.style.backgroundRepeat = "no-repeat";
+		  glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+		  bw = 3;
+		  w = glass.offsetWidth / 2;
+		  h = glass.offsetHeight / 2;
+
+		  /* Execute a function when someone moves the magnifier glass over the image: */
+		  glass.addEventListener("mousemove", moveMagnifier);
+		  img.addEventListener("mousemove", moveMagnifier);
+
+		  /*and also for touch screens:*/
+		  glass.addEventListener("touchmove", moveMagnifier);
+		  img.addEventListener("touchmove", moveMagnifier);
+		  function moveMagnifier(e) {
+			var pos, x, y;
+			/* Prevent any other actions that may occur when moving over the image */
+			e.preventDefault();
+			/* Get the cursor's x and y positions: */
+			pos = getCursorPos(e);
+			x = pos.x;
+			y = pos.y;
+			/* Prevent the magnifier glass from being positioned outside the image: */
+			if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
+			if (x < w / zoom) {x = w / zoom;}
+			if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
+			if (y < h / zoom) {y = h / zoom;}
+			/* Set the position of the magnifier glass: */
+			glass.style.left = (x - w) + "px";
+			glass.style.top = (y - h) + "px";
+			/* Display what the magnifier glass "sees": */
+			glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+		  }
+
+		  function getCursorPos(e) {
+			var a, x = 0, y = 0;
+			e = e || window.event;
+			/* Get the x and y positions of the image: */
+			a = img.getBoundingClientRect();
+			/* Calculate the cursor's x and y coordinates, relative to the image: */
+			x = e.pageX - a.left;
+			y = e.pageY - a.top;
+			/* Consider any page scrolling: */
+			x = x - window.pageXOffset;
+			y = y - window.pageYOffset;
+			return {x : x, y : y};
+		  }
 		}
-	}
-</script>
+	</script>
+	
+	<script>
+	/* Execute the magnify function: */
+	magnify("show", 4);
+	/* Specify the id of the image, and the strength of the magnifier glass: */
+	</script>
 
 
 </body>
