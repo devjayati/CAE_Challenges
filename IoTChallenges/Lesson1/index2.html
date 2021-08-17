@@ -20,21 +20,25 @@
 		<p></p>
 	</div>
 	<div id="options">
-		<input type="hidden" class="scene" id="31"/>
+		<input type="hidden" class="scene" id="200"/>
 		<label for="userInput" id="label">Username:</label>
 		<input type="text" id="userInput"></input>
 		<label for="userInput2" id="label2">Password:</label>
-		<input type="text" id="userInput2"></input>
+		<input type="password" id="userInput2"></input>
 		<input type="button" class="option" value="Login" id="option2" onclick="myFunction()" />
 		<br style="clear: left;" />
-		
 	</div>
+	<div id="results">
+		<p id="display-results" style="position:relative;top:80px;"> Show/ Hide </p>
+	</div>
+	<!--
 	<div id="wrong">
 		<p>The username or password you entered are not correct.  Please try again.</p>
 	</div>
 	<div id="correct">
 		<p>Correct!  You now have access to the camera!</p>
 	</div>
+	-->
 </div>
 
 <div id="footer">
@@ -44,6 +48,17 @@
 
 <script>
 	function myFunction(){
+		var results = document.getElementById("results");
+		results.style.display = "block";
+		var x = document.getElementsByClassName("scene")[0].id;
+		var answer = userInput.value+userInput2.value;
+		var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function() {
+				document.getElementById("display-results").innerHTML = this.responseText;
+		};
+		xmlhttp.open("GET", "index.php?q=" + answer + '&x=' + x, true);
+		xmlhttp.send();
+	/*
 	var username = userInput.value;
 	var password = userInput2.value;
 		if(username == "admin" && password == "admin"){
@@ -54,6 +69,7 @@
 			correct.style = "display:none";
 			wrong.style = "display:block";
 		}
+		*/
 	}
 </script>
 

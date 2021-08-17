@@ -8,7 +8,38 @@
         document.getElementById('results').style.display = "block";
 		document.getElementById('header').style.display = "none";
 		document.getElementById('scenario').style.display = "none";
+		document.getElementById('options').style.display = "none";
         }
+		
+		function check(){
+			var answer;
+			if(up.checked){
+				answer = "up";
+			}
+			else if(down.checked){
+				answer = "down";
+			}
+			else if(attic.checked){
+				answer = "attic";
+			}
+			else if(therm.checked){
+				answer = "therm";
+			}
+			else if(ring.checked){
+				answer = "ring";
+			}
+			else{
+				answer = "none";
+			}
+			
+			var x = document.getElementsByClassName("scene")[0].id;
+			var xmlhttp = new XMLHttpRequest();
+				xmlhttp.onreadystatechange = function() {
+					document.getElementById("display-results").innerHTML = this.responseText;
+			};
+			xmlhttp.open("GET", "index.php?q=" + answer + '&x=' + x, true);
+			xmlhttp.send();
+		}
 </script>
 
 <title>IoT Lesson 2</title>
@@ -28,6 +59,7 @@
 		<p></p>
 	</div><hr>
 	<div id="options">
+		<input type="hidden" class="scene" id="250"/>
 		<input type="button" class="option" value="Check the Memo App on Your Phone" id="option2" onclick="show()" />
 	</div><hr>
 	<div id="results"  style="display:none;">
@@ -35,7 +67,7 @@
 		<p id="display-results">Which of these would be useful to switch on?</p>
 		  <input type="radio" id="up" name="devices">
 		  <label for="up">Upstairs Lights</label><br>
-		  <input type="radio" id="down" name="devices">
+		  <input type="radio" id="down" name="devices"\>
 		  <label for="down">Downstairs Lights</label><br>
 		  <input type="radio" id="attic" name="devices">
 		  <label for="attic">Attic Lights</label><br>
@@ -44,9 +76,13 @@
 		  <input type="radio" id="ring" name="devices">
 		  <label for="ring">Ring Alarm</label>
 		<div id="next-button">
+<<<<<<< HEAD
 			<form action="index2.html">
 				<input type="button" class="button" value="Check" onclick="show()"/>
 			</form>
+=======
+			<input type="submit" class="button" value="Check" onclick="check()" />
+>>>>>>> 0cc5286398758b27b326f421ecf3b4060feaa602
 		</div>
 	</div>
 </div>
